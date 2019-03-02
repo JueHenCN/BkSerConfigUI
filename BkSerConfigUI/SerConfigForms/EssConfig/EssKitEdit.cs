@@ -34,7 +34,6 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
             {
                 node = new Node()
                 {
-                    Name = txtKitName.Text,
                     Level = 1,
                 };
                 node.ChildNodes.Add("delay", new Node()
@@ -47,10 +46,13 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
                 kitNode.ChildNodes.Add(txtKitName.Text, node);
             }
             else
-            {
-                node.Name = txtKitName.Text;
                 node.ChildNodes["delay"].Values[0] = nudKitDelay.Value.ToString();
-            }
+            node.Name = txtKitName.Text;
+            Close();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
             Close();
         }
     }

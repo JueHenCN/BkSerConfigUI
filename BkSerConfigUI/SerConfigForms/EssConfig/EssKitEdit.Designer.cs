@@ -39,34 +39,35 @@
             // 
             // txtKitName
             // 
-            this.txtKitName.Location = new System.Drawing.Point(154, 7);
+            this.txtKitName.Location = new System.Drawing.Point(116, 6);
+            this.txtKitName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtKitName.Name = "txtKitName";
-            this.txtKitName.Size = new System.Drawing.Size(90, 25);
+            this.txtKitName.Size = new System.Drawing.Size(68, 21);
             this.txtKitName.TabIndex = 3;
             // 
             // nudKitDelay
             // 
-            this.nudKitDelay.Location = new System.Drawing.Point(154, 38);
+            this.nudKitDelay.Location = new System.Drawing.Point(116, 30);
+            this.nudKitDelay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nudKitDelay.Name = "nudKitDelay";
-            this.nudKitDelay.Size = new System.Drawing.Size(91, 25);
+            this.nudKitDelay.Size = new System.Drawing.Size(68, 21);
             this.nudKitDelay.TabIndex = 175;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(251, 36);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel.Location = new System.Drawing.Point(188, 29);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(71, 28);
+            this.btnCancel.Size = new System.Drawing.Size(53, 22);
             this.btnCancel.TabIndex = 258;
             this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(251, 5);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOK.Location = new System.Drawing.Point(188, 4);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(71, 28);
+            this.btnOK.Size = new System.Drawing.Size(53, 22);
             this.btnOK.TabIndex = 259;
             this.btnOK.Text = "确定";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -77,10 +78,9 @@
             this.lbKitDelay.AutoSize = true;
             this.lbKitDelay.ConfigDescription = "是否在服务器窗口上显示更多的输出信息";
             this.lbKitDelay.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbKitDelay.Location = new System.Drawing.Point(13, 40);
-            this.lbKitDelay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbKitDelay.Location = new System.Drawing.Point(10, 32);
             this.lbKitDelay.Name = "lbKitDelay";
-            this.lbKitDelay.Size = new System.Drawing.Size(133, 20);
+            this.lbKitDelay.Size = new System.Drawing.Size(107, 17);
             this.lbKitDelay.TabIndex = 174;
             this.lbKitDelay.Text = "礼包领取时间间隔:";
             // 
@@ -89,25 +89,23 @@
             this.lbKitName.AutoSize = true;
             this.lbKitName.ConfigDescription = "是否为每个地标启用单独的传送权限";
             this.lbKitName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbKitName.Location = new System.Drawing.Point(13, 9);
-            this.lbKitName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbKitName.Location = new System.Drawing.Point(10, 7);
             this.lbKitName.Name = "lbKitName";
-            this.lbKitName.Size = new System.Drawing.Size(103, 20);
+            this.lbKitName.Size = new System.Drawing.Size(83, 17);
             this.lbKitName.TabIndex = 173;
             this.lbKitName.Text = "赠送礼包名称:";
             // 
             // EssKitEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(328, 71);
+            this.ClientSize = new System.Drawing.Size(246, 57);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.nudKitDelay);
             this.Controls.Add(this.lbKitDelay);
             this.Controls.Add(this.lbKitName);
             this.Controls.Add(this.txtKitName);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "EssKitEdit";
