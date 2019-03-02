@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{14F4D903-3C55-4137-B6A8-C2E91BE7B887}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BkSerConfigUI</RootNamespace>
+    <AssemblyName>BkSerConfigUI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SerConfigForms\EssConfig\EssBuildSettingEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerConfigForms\EssConfig\EssBuildSettingEdit.Designer.cs">
+      <DependentUpon>EssBuildSettingEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerConfigForms\EssConfig\EssDateSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerConfigForms\EssConfig\EssDateSetting.Designer.cs">
+      <DependentUpon>EssDateSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerConfigForms\EssConfig\EssKitEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerConfigForms\EssConfig\EssKitEdit.Designer.cs">
+      <DependentUpon>EssKitEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerConfigForms\EssConfig\EssKitItemEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerConfigForms\EssConfig\EssKitItemEdit.Designer.cs">
+      <DependentUpon>EssKitItemEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerConfigForms\EssConfig\EssKitSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerConfigForms\EssConfig\EssKitSetting.Designer.cs">
+      <DependentUpon>EssKitSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerConfigForms\EssConfig\EssPhysicalSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerConfigForms\EssConfig\EssPhysicalSetting.Designer.cs">
+      <DependentUpon>EssPhysicalSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerConfigForms\EssConfig\EssSignsSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerConfigForms\EssConfig\EssSignsSetting.Designer.cs">
+      <DependentUpon>EssSignsSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerConfigForms\InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerConfigForms\InputBox.Designer.cs">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerConfigForms\SerConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerConfigForms\SerConfig.Designer.cs">
+      <DependentUpon>SerConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerConfigForms\Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerConfigForms\Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerConfigHelp\Constant\EssConst.cs" />
+    <Compile Include="SerConfigHelp\Model\Item.cs" />
+    <Compile Include="SerConfigHelp\Model\Kit.cs" />
+    <Compile Include="SerConfigTool\SerConfigAlertButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerConfigTool\SerConfigAlertButton.Designer.cs">
+      <DependentUpon>SerConfigAlertButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerConfigTool\SerConfigEditButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerConfigTool\SerConfigEditButton.Designer.cs">
+      <DependentUpon>SerConfigEditButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerConfigTool\SerConfigLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerConfigTool\SerConfigLabel.Designer.cs">
+      <DependentUpon>SerConfigLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerConfigTool\SerConfigComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerConfigTool\SerConfigComboBox.Designer.cs">
+      <DependentUpon>SerConfigComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerConfigTool\SerConfigNumericUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerConfigTool\SerConfigNumericUpDown.Designer.cs">
+      <DependentUpon>SerConfigNumericUpDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerConfigTool\SerConfigButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SerConfigTool\SerConfigButton.Designer.cs">
+      <DependentUpon>SerConfigButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerConfigForms\EssConfig\EssConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerConfigForms\EssConfig\EssConfig.Designer.cs">
+      <DependentUpon>EssConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerConfigHelp\Util\CsvUtil.cs" />
+    <Compile Include="SerConfigHelp\Util\JarUtil.cs" />
+    <Compile Include="SerConfigHelp\Util\CurrencyUtil.cs" />
+    <Compile Include="SerConfigHelp\Util\YamlUtil.cs" />
+    <EmbeddedResource Include="SerConfigForms\EssConfig\EssBuildSettingEdit.resx">
+      <DependentUpon>EssBuildSettingEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SerConfigForms\EssConfig\EssDateSetting.resx">
+      <DependentUpon>EssDateSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SerConfigForms\EssConfig\EssKitEdit.resx">
+      <DependentUpon>EssKitEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SerConfigForms\EssConfig\EssKitItemEdit.resx">
+      <DependentUpon>EssKitItemEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SerConfigForms\EssConfig\EssKitSetting.resx">
+      <DependentUpon>EssKitSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SerConfigForms\EssConfig\EssPhysicalSetting.resx">
+      <DependentUpon>EssPhysicalSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SerConfigForms\EssConfig\EssSignsSetting.resx">
+      <DependentUpon>EssSignsSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SerConfigForms\InputBox.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SerConfigForms\SerConfig.resx">
+      <DependentUpon>SerConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SerConfigForms\Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SerConfigTool\SerConfigButton.resx">
+      <DependentUpon>SerConfigButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SerConfigForms\EssConfig\EssConfig.resx">
+      <DependentUpon>EssConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SerConfigHelp\Image\c.ICO" />
+    <Content Include="SerConfigHelp\Image\off.png" />
+    <Content Include="SerConfigHelp\Image\on.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
