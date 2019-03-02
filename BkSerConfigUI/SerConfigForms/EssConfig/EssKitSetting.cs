@@ -46,6 +46,7 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
                 DocNode.Nodes.Add(treeNode);
             }
             tvKits.Nodes.Add(DocNode);
+            tvKits.Nodes[0].Expand();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -70,6 +71,7 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
             btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = false;
             if (tvKits.SelectedNode != null)
             {
+                tvKits.SelectedNode.Expand();
                 btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = true;
                 switch (tvKits.SelectedNode.Level)
                 {
@@ -88,7 +90,7 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
                         btnDelete.Text = "删除物品";
                         break;
                 }
-            } 
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

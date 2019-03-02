@@ -9,7 +9,6 @@ namespace BkSerConfigUI.SerConfigHelp.Util
     {
 
         private Dictionary<string,Node> rootNode = new Dictionary<string, Node>();
-        private List<Node> allNode = new List<Node>();
         private string ymlPath;
 
         public YamlUtil(string ymlPath)
@@ -27,6 +26,7 @@ namespace BkSerConfigUI.SerConfigHelp.Util
         /// <param name="lines">文件行内容</param>
         private void read(string[] lines)
         {
+            List<Node> allNode = new List<Node>();
             /// 移除所有注释内容;
             for (int i = 0; i < lines.Length; i++)
                 if (lines[i].IndexOf('#') >= 0)
@@ -75,7 +75,7 @@ namespace BkSerConfigUI.SerConfigHelp.Util
                     rootNode.Add(node.Name, node);
             
         }
-
+        
         public bool Edit(string key, string value)
         {
             return Edit(key, new List<string>() { value });
@@ -134,6 +134,33 @@ namespace BkSerConfigUI.SerConfigHelp.Util
             return FindNodeByKey(key).Values;
         }
 
+        private void SaveNode(Node node, StreamWriter stream)
+        {
+            StringBuilder sb = new StringBuilder();
+            for (int j = 0; j < node.Level; j++) { sb.Append("  "); } // 加入前缀空格
+            sb.Append(node.Name); // 添加节点名称
+            sb.Append(": "); // 添加节点冒号分隔符
+            if (node.Values.Count != 0)
+                if (node.NodeType.Equals(Node.NodeTypes.OBJECT))
+                {
+                    foreach (string value in node.Values)
+                    {
+                        sb.AppendLine();
+                        for (int j = 0; j < node.Level * 2 + 2; j++) { sb.Append(" "); } // 加入前缀空格
+                        if (value.IndexOf('-') != 0 || CurrencyUtil.IsNumber(value))
+                            sb.Append("- " + value);
+                    }
+                }
+                else if (CurrencyUtil.IsNumber(node.Values[0]) || CurrencyUtil.IsBool(node.Values[0]))
+                    sb.Append(node.Values[0]);
+                else
+                    sb.Append("'" + node.Values[0] + "'");
+            stream.WriteLine(sb.ToString());
+            foreach (Node zNode in node.ChildNodes.Values)
+                SaveNode(zNode, stream);
+
+        }
+
         /// <summary>
         /// 将数据保存到文件中
         /// </summary>
@@ -144,31 +171,8 @@ namespace BkSerConfigUI.SerConfigHelp.Util
         {
             if (string.IsNullOrEmpty(ymlPath)) return false;
             StreamWriter stream = File.CreateText(ymlPath); // 加载文件
-            foreach (Node node in allNode)
-            {
-                StringBuilder sb = new StringBuilder();
-                for (int j = 0; j < node.Level; j++) { sb.Append("  "); } // 加入前缀空格
-                sb.Append(node.Name); // 添加节点名称
-                sb.Append(": "); // 添加节点冒号分隔符
-                if (node.Values.Count != 0)
-                    //if (node.Values.Count > 1 || node.Values[0].IndexOf('-') == 0 && !CurrencyUtil.IsNumber(node.Values[0]))
-                    if(node.NodeType.Equals(Node.NodeTypes.OBJECT))
-                    {
-                        foreach (string value in node.Values)
-                        {
-                            sb.AppendLine();
-                            for (int j = 0; j < node.Level*2+2; j++) { sb.Append(" "); } // 加入前缀空格
-                            if(value.IndexOf('-') != 0 || CurrencyUtil.IsNumber(value))
-                                sb.Append("- " + value);
-                        }
-                    }
-                    else if (CurrencyUtil.IsNumber(node.Values[0]) || CurrencyUtil.IsBool(node.Values[0]))
-                        sb.Append(node.Values[0]);
-                    else
-                        sb.Append("'"+node.Values[0]+"'");
-
-                stream.WriteLine(sb.ToString());
-            }
+            foreach (Node node in rootNode.Values)
+                SaveNode(node, stream);
             stream.Flush();
             stream.Close();
             return true;
