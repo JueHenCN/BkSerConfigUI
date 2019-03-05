@@ -39,8 +39,14 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
             foreach (Kit kit in kits)
             {
                 TreeNode treeNode = new TreeNode();
-                foreach (KitItme kitItme in kit.KitItems)
-                    treeNode.Nodes.Add(new TreeNode() { Text = kitItme.ItemId + ":" + kitItme.ItemMetadata });
+                foreach (KitItem kitItem in kit.KitItems)
+                    treeNode.Nodes.Add(new TreeNode()
+                    {
+                        Text = kitItem.ItemMetadata == 0 ?
+                        kitItem.ItemId.ToString() :
+                        kitItem.ItemId + ":" + kitItem.ItemMetadata,
+                        Tag = kitItem
+                    });
                 treeNode.Text = kit.KitName;
                 treeNode.Tag = kit;
                 DocNode.Nodes.Add(treeNode);
@@ -96,7 +102,28 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
                 if (tvKits.SelectedNode.Level == 1)
                     new EssKitEdit((Kit)tvKits.SelectedNode.Tag).ShowDialog();
                 else
+                    new EssKitItemEdit((KitItem)tvKits.SelectedNode.Tag).ShowDialog();
+                LodaKits(sender, e);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (tvKits.SelectedNode != null && MessageBox.Show("是否确认删除", "操作提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Information).Equals(DialogResult.OK))
+            {
+                if (tvKits.SelectedNode.Level == 1)
                 {
+                    EssConst.yaml.FindNodeByKey("kits").ChildNodes.Remove(tvKits.SelectedNode.Text);
+                }
+                else
+                {
+                    Node node = EssConst.yaml.FindNodeByKey("kits." + tvKits.SelectedNode.Parent.Text + ".items");
+                    for (int i = 0; i < node.Values.Count; i++)
+                        if (node.Values[i].Split(' ')[0].IndexOf(tvKits.SelectedNode.Text) > -1)
+                        {
+                            node.Values.RemoveAt(i);
+                            break;
+                        }
                 }
                 LodaKits(sender, e);
             }

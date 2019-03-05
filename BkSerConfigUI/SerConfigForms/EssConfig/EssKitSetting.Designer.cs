@@ -1,4 +1,6 @@
-﻿namespace BkSerConfigUI.SerConfigForms.EssConfig
+﻿using System;
+
+namespace BkSerConfigUI.SerConfigForms.EssConfig
 {
     partial class EssKitSetting
     {
