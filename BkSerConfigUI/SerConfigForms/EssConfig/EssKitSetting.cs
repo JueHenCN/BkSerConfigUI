@@ -39,14 +39,8 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
             foreach (Kit kit in kits)
             {
                 TreeNode treeNode = new TreeNode();
-                foreach (KitItem kitItem in kit.KitItems)
-                    treeNode.Nodes.Add(new TreeNode()
-                    {
-                        Text = kitItem.ItemMetadata == 0 ?
-                        kitItem.ItemId.ToString() : 
-                        kitItem.ItemId + ":" + kitItem.ItemMetadata,
-                        Tag = kitItem
-                    });
+                foreach (KitItme kitItme in kit.KitItems)
+                    treeNode.Nodes.Add(new TreeNode() { Text = kitItme.ItemId + ":" + kitItme.ItemMetadata });
                 treeNode.Text = kit.KitName;
                 treeNode.Tag = kit;
                 DocNode.Nodes.Add(treeNode);
@@ -102,7 +96,8 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
                 if (tvKits.SelectedNode.Level == 1)
                     new EssKitEdit((Kit)tvKits.SelectedNode.Tag).ShowDialog();
                 else
-                    new EssKitItemEdit((KitItem)tvKits.SelectedNode.Tag).ShowDialog();
+                {
+                }
                 LodaKits(sender, e);
             }
         }

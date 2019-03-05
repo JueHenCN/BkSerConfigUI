@@ -43,7 +43,6 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -55,38 +54,35 @@
             this.splitContainer1.Panel2.Controls.Add(this.btnDelete);
             this.splitContainer1.Panel2.Controls.Add(this.btnEdit);
             this.splitContainer1.Panel2.Controls.Add(this.btnAdd);
-            this.splitContainer1.Size = new System.Drawing.Size(285, 335);
-            this.splitContainer1.SplitterDistance = 186;
-            this.splitContainer1.SplitterWidth = 5;
+            this.splitContainer1.Size = new System.Drawing.Size(214, 268);
+            this.splitContainer1.SplitterDistance = 139;
             this.splitContainer1.TabIndex = 0;
             // 
             // tvKits
             // 
             this.tvKits.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tvKits.Location = new System.Drawing.Point(0, 0);
-            this.tvKits.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tvKits.Name = "tvKits";
-            this.tvKits.Size = new System.Drawing.Size(186, 335);
+            this.tvKits.Size = new System.Drawing.Size(139, 268);
             this.tvKits.TabIndex = 0;
             this.tvKits.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvKits_AfterSelect);
             this.tvKits.EnabledChanged += new System.EventHandler(this.LodaKits);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(3, 76);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Location = new System.Drawing.Point(2, 61);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(87, 29);
+            this.btnDelete.Size = new System.Drawing.Size(65, 23);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "删除";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(3, 40);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEdit.Location = new System.Drawing.Point(2, 32);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(87, 29);
+            this.btnEdit.Size = new System.Drawing.Size(65, 23);
             this.btnEdit.TabIndex = 4;
             this.btnEdit.Text = "编辑";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -94,10 +90,9 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(3, 4);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Location = new System.Drawing.Point(2, 3);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(87, 29);
+            this.btnAdd.Size = new System.Drawing.Size(65, 23);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "新增";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -105,12 +100,11 @@
             // 
             // EssKitSetting
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(285, 335);
+            this.ClientSize = new System.Drawing.Size(214, 268);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "EssKitSetting";
