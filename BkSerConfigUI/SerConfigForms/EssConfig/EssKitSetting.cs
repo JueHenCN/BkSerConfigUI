@@ -21,15 +21,15 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
             List<Kit> kits = new List<Kit>();
             foreach (Node node in allKits.Values)
             {
-                List<KitItme> kitItmes = new List<KitItme>();
+                List<KitItem> kitItems = new List<KitItem>();
                 foreach (string itemValue in node.ChildNodes["items"].Values)
-                    kitItmes.Add(new KitItme(itemValue));
+                    kitItems.Add(new KitItem(itemValue));
                 Kit kit = new Kit()
                 {
                     KitName = node.Name,
                     Tag = node,
                     Delay = CurrencyUtil.ChangeLongNumber(node.ChildNodes["delay"].Values[0]),
-                    KitItems = kitItmes
+                    KitItems = kitItems
                 };
                 kits.Add(kit);
             }
@@ -39,8 +39,14 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
             foreach (Kit kit in kits)
             {
                 TreeNode treeNode = new TreeNode();
-                foreach (KitItme kitItme in kit.KitItems)
-                    treeNode.Nodes.Add(new TreeNode() { Text = kitItme.ItemId + ":" + kitItme.ItemMetadata });
+                foreach (KitItem kitItem in kit.KitItems)
+                    treeNode.Nodes.Add(new TreeNode()
+                    {
+                        Text = kitItem.ItemMetadata == 0 ?
+                        kitItem.ItemId.ToString() : 
+                        kitItem.ItemId + ":" + kitItem.ItemMetadata,
+                        Tag = kitItem
+                    });
                 treeNode.Text = kit.KitName;
                 treeNode.Tag = kit;
                 DocNode.Nodes.Add(treeNode);
@@ -54,13 +60,9 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
             if (tvKits.SelectedNode != null)
             {
                 if (tvKits.SelectedNode.Level == 0)
-                {
                     new EssKitEdit().ShowDialog();
-                }
                 else
-                {
-
-                }
+                    new EssKitItemEdit().ShowDialog();
 
                 LodaKits(sender, e);
             }
@@ -98,12 +100,9 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
             if (tvKits.SelectedNode != null)
             {
                 if (tvKits.SelectedNode.Level == 1)
-                {
                     new EssKitEdit((Kit)tvKits.SelectedNode.Tag).ShowDialog();
-                }
                 else
-                {
-                }
+                    new EssKitItemEdit((KitItem)tvKits.SelectedNode.Tag).ShowDialog();
                 LodaKits(sender, e);
             }
         }

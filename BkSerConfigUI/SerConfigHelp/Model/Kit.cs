@@ -12,10 +12,10 @@ namespace BkSerConfigUI.SerConfigHelp.Model
 
         public object Tag { get; set; }
 
-        public List<KitItme> KitItems = new List<KitItme>();
+        public List<KitItem> KitItems = new List<KitItem>();
     }
 
-    public class KitItme : Item
+    public class KitItem : Item
     {
         /// <summary>
         /// 物品数量
@@ -50,11 +50,11 @@ namespace BkSerConfigUI.SerConfigHelp.Model
         /// <summary>
         /// 物品附魔属性
         /// </summary>
-        public Dictionary<string, short> ItemEnchanting = new Dictionary<string, short>();
+        public List<Enchanting> ItemEnchanting = new List<Enchanting>();
 
-        public KitItme(){ }
+        public KitItem(){ }
 
-        public KitItme(string kitValue)
+        public KitItem(string kitValue)
         {
             string[] kitValues = kitValue.Split(' ');
             ItemId = (int)Util.CurrencyUtil.ChangeLongNumber(kitValues[0].Split(':')[0]);
@@ -83,10 +83,18 @@ namespace BkSerConfigUI.SerConfigHelp.Model
                     case "shape":
                     case "effect":
                     case "power":
+                    case "type":
                         IsFireworks = true;
                         break;
+                    case "player":
+                        break;
                     default:
-                        ItemEnchanting.Add(kitAttribute[0],(short)Util.CurrencyUtil.ChangeLongNumber(kitAttribute[1]));
+                        /*if(ItemId == 278)
+                        {
+                            int x = 0;
+                        }*/
+                        ItemEnchanting.Add(Constant.EssConst.ENCHANTINGS.Find(
+                            (Enchanting en) => en.Name.Equals(kitAttribute[0])));
                         break;
                 }
             }
@@ -95,7 +103,7 @@ namespace BkSerConfigUI.SerConfigHelp.Model
         }
     }
 
-    public class KitBookItme : KitItme
+    public class KitBookItem : KitItem
     {
         /// <summary>
         /// 自定义标题
@@ -113,7 +121,7 @@ namespace BkSerConfigUI.SerConfigHelp.Model
         public string Book { get; set; }
     }
 
-    public class KitFireworksItme : KitItme
+    public class KitFireworksItme : KitItem
     {
 
     }

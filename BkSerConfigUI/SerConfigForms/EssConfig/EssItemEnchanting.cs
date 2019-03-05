@@ -1,58 +1,27 @@
 ﻿using BkSerConfigUI.SerConfigHelp.Model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BkSerConfigUI.SerConfigForms.EssConfig
 {
-    public partial class EssKitItemEdit : Form
+    public partial class EssItemEnchanting : Form
     {
-        public KitItem Item { get; set; }
+        KitItem KitItem;
         List<Enchanting> enchantings = SerConfigHelp.Constant.EssConst.ENCHANTINGS;
 
-        public EssKitItemEdit(KitItem kitItem = null)
+        public EssItemEnchanting(KitItem kitItem)
         {
             InitializeComponent();
-            if (null != kitItem)
-            {
-                Item = kitItem;
-                tbId.Text = Item.ItemMetadata == 0 ? Item.ItemId.ToString() : Item.ItemId + ":" + Item.ItemMetadata;
-                nudItemNumber.Value = Item.ItemNumber;
-                tbItemName.Text = Item.ItemName;
-                tbCustomizeRemarks.Text = Item.CustomizeRemarks;
-                Item = kitItem;
-                LoadNowEnchanting();
-                return;
-            }
-            Item = new KitItem();
-            foreach (var enchanting in enchantings)
-                tvEnchantings.Nodes.Add(new TreeNode()
-                {
-                    Text = enchanting.CustomizeName,
-                    Tag = enchanting
-                });
-            nudEnchantingLevel.Enabled = false;
-        }
-
-        private void btnItemColor_Click(object sender, EventArgs e)
-        {
-            ColorDialog color = new ColorDialog();
-            if (color.ShowDialog().Equals(DialogResult.Cancel))
-                return;
-            Item.Color = color.Color.R + ","+color.Color.B + "," + color.Color.G;
+            KitItem = kitItem;
+            LoadNowEnchanting();
         }
 
         private void LoadNowEnchanting()
         {
             tvEnchantings.Nodes.Clear();
             tvNowEnchanting.Nodes.Clear();
-            foreach (var item in Item.ItemEnchanting)
+            foreach (var item in KitItem.ItemEnchanting)
             {
                 enchantings.RemoveAll((Enchanting en) => en.CustomizeName.Equals(item.CustomizeName));
                 tvNowEnchanting.Nodes.Add(new TreeNode()
@@ -84,7 +53,7 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
         {
             if (tvEnchantings.SelectedNode != null)
             {
-                Item.ItemEnchanting.Add((Enchanting)tvEnchantings.SelectedNode.Tag);
+                KitItem.ItemEnchanting.Add((Enchanting)tvEnchantings.SelectedNode.Tag);
                 enchantings.Remove((Enchanting)tvEnchantings.SelectedNode.Tag);
                 LoadNowEnchanting();
             }
@@ -94,8 +63,8 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
         {
             if (tvNowEnchanting.SelectedNode != null)
             {
-                enchantings.Add((Enchanting)tvNowEnchanting.SelectedNode.Tag);
-                Item.ItemEnchanting.Remove((Enchanting)tvNowEnchanting.SelectedNode.Tag);
+                KitItem.ItemEnchanting.Remove((Enchanting)tvEnchantings.SelectedNode.Tag);
+                enchantings.Add((Enchanting)tvEnchantings.SelectedNode.Tag);
                 LoadNowEnchanting();
             }
         }

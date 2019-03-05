@@ -67,6 +67,12 @@
     <Compile Include="SerConfigForms\EssConfig\EssDateSetting.Designer.cs">
       <DependentUpon>EssDateSetting.cs</DependentUpon>
     </Compile>
+    <Compile Include="SerConfigForms\EssConfig\EssItemEnchanting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerConfigForms\EssConfig\EssItemEnchanting.Designer.cs">
+      <DependentUpon>EssItemEnchanting.cs</DependentUpon>
+    </Compile>
     <Compile Include="SerConfigForms\EssConfig\EssKitEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,7 @@
       <DependentUpon>Start.cs</DependentUpon>
     </Compile>
     <Compile Include="SerConfigHelp\Constant\EssConst.cs" />
+    <Compile Include="SerConfigHelp\Model\Enchanting.cs" />
     <Compile Include="SerConfigHelp\Model\Item.cs" />
     <Compile Include="SerConfigHelp\Model\Kit.cs" />
     <Compile Include="SerConfigTool\SerConfigAlertButton.cs">
@@ -171,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SerConfigForms\EssConfig\EssDateSetting.resx">
       <DependentUpon>EssDateSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SerConfigForms\EssConfig\EssItemEnchanting.resx">
+      <DependentUpon>EssItemEnchanting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SerConfigForms\EssConfig\EssKitEdit.resx">
       <DependentUpon>EssKitEdit.cs</DependentUpon>
