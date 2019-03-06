@@ -11,6 +11,7 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
         public EssConfig()
         {
             InitializeComponent();
+            cbOps_name_color.DataSource = EssConst.OPS_NAME_COLOR;
         }
 
         private YamlUtil yaml;
@@ -50,11 +51,6 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
             else
                 MessageBox.Show("保存失败", "错误提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
             tsMenu.Focus();
-        }
-        
-        private void EssConfig_Load(object sender, EventArgs e)
-        {
-            cbOps_name_color.DataSource = EssConst.OPS_NAME_COLOR;
         }
 
         private void onbtchange_displayname_Paint(object sender, PaintEventArgs e)

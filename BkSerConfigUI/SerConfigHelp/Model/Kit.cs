@@ -2,20 +2,41 @@
 
 namespace BkSerConfigUI.SerConfigHelp.Model
 {
+    /// <summary>
+    /// 礼包
+    /// </summary>
     public class Kit
     {
+        /// <summary>
+        /// 礼包名称
+        /// </summary>
         public string KitName { get; set; }
 
+        /// <summary>
+        /// 领取时间间隔
+        /// </summary>
         public long Delay { get; set; }
 
+        /// <summary>
+        /// 礼包类型
+        /// </summary>
         public string KitType { get; set; }
 
+        /// <summary>
+        /// 礼包所对应的节点
+        /// </summary>
         public object Tag { get; set; }
 
-        public List<KitItem> KitItems = new List<KitItem>();
+        /// <summary>
+        /// 礼包中包含的所有物品
+        /// </summary>
+        public List<CustomizeItem> KitItems = new List<CustomizeItem>();
     }
 
-    public class KitItem : Item
+    /// <summary>
+    /// 物品自定义信息
+    /// </summary>
+    public class CustomizeItem : Item
     {
         /// <summary>
         /// 物品数量
@@ -48,13 +69,13 @@ namespace BkSerConfigUI.SerConfigHelp.Model
         public bool IsFireworks { get; set; }
 
         /// <summary>
-        /// 物品附魔属性
+        /// 物品附魔属性集合
         /// </summary>
         public List<Enchanting> ItemEnchanting = new List<Enchanting>();
 
-        public KitItem(){ }
+        public CustomizeItem(){ }
 
-        public KitItem(string kitValue)
+        public CustomizeItem(string kitValue)
         {
             string[] kitValues = kitValue.Split(' ');
             ItemId = (int)Util.CurrencyUtil.ChangeLongNumber(kitValues[0].Split(':')[0]);
@@ -103,7 +124,7 @@ namespace BkSerConfigUI.SerConfigHelp.Model
         }
     }
 
-    public class KitBookItem : KitItem
+    public class KitBookItem : CustomizeItem
     {
         /// <summary>
         /// 自定义标题
@@ -121,7 +142,10 @@ namespace BkSerConfigUI.SerConfigHelp.Model
         public string Book { get; set; }
     }
 
-    public class KitFireworksItme : KitItem
+    /// <summary>
+    /// 烟花
+    /// </summary>
+    public class KitFireworksItme : CustomizeItem
     {
 
     }

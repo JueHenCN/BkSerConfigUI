@@ -35,11 +35,6 @@
             this.btnItemColor = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.lbCustomizeRemarks = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
-            this.lblItemColor = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
-            this.lbItemName = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
-            this.lbItemNumber = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
-            this.lbItemId = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
             this.lbEnchantingLevel = new System.Windows.Forms.Label();
             this.nudEnchantingLevel = new System.Windows.Forms.NumericUpDown();
             this.tvNowEnchanting = new System.Windows.Forms.TreeView();
@@ -48,6 +43,11 @@
             this.btnDel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.lbNowEnchanting = new System.Windows.Forms.Label();
+            this.lbCustomizeRemarks = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
+            this.lblItemColor = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
+            this.lbItemName = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
+            this.lbItemNumber = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
+            this.lbItemId = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
             ((System.ComponentModel.ISupportInitialize)(this.nudItemNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudEnchantingLevel)).BeginInit();
             this.SuspendLayout();
@@ -114,6 +114,7 @@
             this.btnSave.TabIndex = 13;
             this.btnSave.Text = "保存";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
             // 
             // btnCancel
             // 
@@ -123,6 +124,92 @@
             this.btnCancel.TabIndex = 14;
             this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click_1);
+            // 
+            // lbEnchantingLevel
+            // 
+            this.lbEnchantingLevel.AutoSize = true;
+            this.lbEnchantingLevel.Location = new System.Drawing.Point(335, 47);
+            this.lbEnchantingLevel.Name = "lbEnchantingLevel";
+            this.lbEnchantingLevel.Size = new System.Drawing.Size(67, 15);
+            this.lbEnchantingLevel.TabIndex = 24;
+            this.lbEnchantingLevel.Text = "附魔等级";
+            // 
+            // nudEnchantingLevel
+            // 
+            this.nudEnchantingLevel.Location = new System.Drawing.Point(335, 69);
+            this.nudEnchantingLevel.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudEnchantingLevel.Name = "nudEnchantingLevel";
+            this.nudEnchantingLevel.ReadOnly = true;
+            this.nudEnchantingLevel.Size = new System.Drawing.Size(66, 25);
+            this.nudEnchantingLevel.TabIndex = 23;
+            this.nudEnchantingLevel.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudEnchantingLevel.ValueChanged += new System.EventHandler(this.nudEnchantingLevel_ValueChanged);
+            // 
+            // tvNowEnchanting
+            // 
+            this.tvNowEnchanting.Location = new System.Drawing.Point(183, 30);
+            this.tvNowEnchanting.Name = "tvNowEnchanting";
+            this.tvNowEnchanting.Size = new System.Drawing.Size(144, 231);
+            this.tvNowEnchanting.TabIndex = 22;
+            this.tvNowEnchanting.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvNowEnchanting_AfterSelect);
+            // 
+            // tvEnchantings
+            // 
+            this.tvEnchantings.Location = new System.Drawing.Point(407, 31);
+            this.tvEnchantings.Name = "tvEnchantings";
+            this.tvEnchantings.Size = new System.Drawing.Size(144, 231);
+            this.tvEnchantings.TabIndex = 21;
+            this.tvEnchantings.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvEnchantings_AfterSelect);
+            // 
+            // lbEnchantings
+            // 
+            this.lbEnchantings.AutoSize = true;
+            this.lbEnchantings.Location = new System.Drawing.Point(431, 9);
+            this.lbEnchantings.Name = "lbEnchantings";
+            this.lbEnchantings.Size = new System.Drawing.Size(97, 15);
+            this.lbEnchantings.TabIndex = 18;
+            this.lbEnchantings.Text = "原版附魔集合";
+            // 
+            // btnDel
+            // 
+            this.btnDel.Enabled = false;
+            this.btnDel.Location = new System.Drawing.Point(333, 139);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(68, 33);
+            this.btnDel.TabIndex = 17;
+            this.btnDel.Text = "移除=>";
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Enabled = false;
+            this.btnAdd.Location = new System.Drawing.Point(333, 100);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(68, 33);
+            this.btnAdd.TabIndex = 16;
+            this.btnAdd.Text = "<=添加";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.MouseEnter += new System.EventHandler(this.btnAdd_MouseEnter);
+            // 
+            // lbNowEnchanting
+            // 
+            this.lbNowEnchanting.AutoSize = true;
+            this.lbNowEnchanting.Location = new System.Drawing.Point(207, 9);
+            this.lbNowEnchanting.Name = "lbNowEnchanting";
+            this.lbNowEnchanting.Size = new System.Drawing.Size(97, 15);
+            this.lbNowEnchanting.TabIndex = 15;
+            this.lbNowEnchanting.Text = "当前物品附魔";
             // 
             // lbCustomizeRemarks
             // 
@@ -173,88 +260,6 @@
             this.lbItemId.Size = new System.Drawing.Size(61, 15);
             this.lbItemId.TabIndex = 0;
             this.lbItemId.Text = "物品Id:";
-            // 
-            // lbEnchantingLevel
-            // 
-            this.lbEnchantingLevel.AutoSize = true;
-            this.lbEnchantingLevel.Location = new System.Drawing.Point(335, 47);
-            this.lbEnchantingLevel.Name = "lbEnchantingLevel";
-            this.lbEnchantingLevel.Size = new System.Drawing.Size(67, 15);
-            this.lbEnchantingLevel.TabIndex = 24;
-            this.lbEnchantingLevel.Text = "附魔等级";
-            // 
-            // nudEnchantingLevel
-            // 
-            this.nudEnchantingLevel.Enabled = false;
-            this.nudEnchantingLevel.Location = new System.Drawing.Point(335, 69);
-            this.nudEnchantingLevel.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudEnchantingLevel.Name = "nudEnchantingLevel";
-            this.nudEnchantingLevel.Size = new System.Drawing.Size(66, 25);
-            this.nudEnchantingLevel.TabIndex = 23;
-            this.nudEnchantingLevel.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudEnchantingLevel.ValueChanged += new System.EventHandler(this.nudEnchantingLevel_ValueChanged);
-            // 
-            // tvNowEnchanting
-            // 
-            this.tvNowEnchanting.Location = new System.Drawing.Point(183, 30);
-            this.tvNowEnchanting.Name = "tvNowEnchanting";
-            this.tvNowEnchanting.Size = new System.Drawing.Size(144, 231);
-            this.tvNowEnchanting.TabIndex = 22;
-            this.tvNowEnchanting.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvNowEnchanting_AfterSelect);
-            // 
-            // tvEnchantings
-            // 
-            this.tvEnchantings.Location = new System.Drawing.Point(407, 31);
-            this.tvEnchantings.Name = "tvEnchantings";
-            this.tvEnchantings.Size = new System.Drawing.Size(144, 231);
-            this.tvEnchantings.TabIndex = 21;
-            this.tvEnchantings.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvEnchantings_AfterSelect);
-            // 
-            // lbEnchantings
-            // 
-            this.lbEnchantings.AutoSize = true;
-            this.lbEnchantings.Location = new System.Drawing.Point(431, 9);
-            this.lbEnchantings.Name = "lbEnchantings";
-            this.lbEnchantings.Size = new System.Drawing.Size(97, 15);
-            this.lbEnchantings.TabIndex = 18;
-            this.lbEnchantings.Text = "原版附魔集合";
-            // 
-            // btnDel
-            // 
-            this.btnDel.Location = new System.Drawing.Point(333, 139);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(68, 33);
-            this.btnDel.TabIndex = 17;
-            this.btnDel.Text = "移除=>";
-            this.btnDel.UseVisualStyleBackColor = true;
-            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(333, 100);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(68, 33);
-            this.btnAdd.TabIndex = 16;
-            this.btnAdd.Text = "<=添加";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // lbNowEnchanting
-            // 
-            this.lbNowEnchanting.AutoSize = true;
-            this.lbNowEnchanting.Location = new System.Drawing.Point(207, 9);
-            this.lbNowEnchanting.Name = "lbNowEnchanting";
-            this.lbNowEnchanting.Size = new System.Drawing.Size(97, 15);
-            this.lbNowEnchanting.TabIndex = 15;
-            this.lbNowEnchanting.Text = "当前物品附魔";
             // 
             // EssKitItemEdit
             // 

@@ -168,6 +168,7 @@
             this.onbtchange_displayname = new BkSerConfigUI.SerConfigTool.SerConfigButton();
             this.cbOps_name_color = new BkSerConfigUI.SerConfigTool.SerConfigComboBox();
             this.lbOps_name_color = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
+            this.lbKitsEdit = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
             this.tsMenu.SuspendLayout();
             this.plAllSetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.serConfigNumericUpDown2)).BeginInit();
@@ -228,6 +229,7 @@
             // 
             // plAllSetting
             // 
+            this.plAllSetting.Controls.Add(this.lbKitsEdit);
             this.plAllSetting.Controls.Add(this.btnKitSetting);
             this.plAllSetting.Controls.Add(this.onprotect_blacklist_dispenser);
             this.plAllSetting.Controls.Add(this.onprotect_blacklist_piston);
@@ -352,15 +354,15 @@
             this.plAllSetting.Controls.Add(this.gbNickNameSetting);
             this.plAllSetting.Enabled = false;
             this.plAllSetting.Location = new System.Drawing.Point(16, 35);
-            this.plAllSetting.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.plAllSetting.Margin = new System.Windows.Forms.Padding(4);
             this.plAllSetting.Name = "plAllSetting";
             this.plAllSetting.Size = new System.Drawing.Size(699, 669);
             this.plAllSetting.TabIndex = 128;
             // 
             // btnKitSetting
             // 
-            this.btnKitSetting.Location = new System.Drawing.Point(507, 408);
-            this.btnKitSetting.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKitSetting.Location = new System.Drawing.Point(611, 392);
+            this.btnKitSetting.Margin = new System.Windows.Forms.Padding(4);
             this.btnKitSetting.Name = "btnKitSetting";
             this.btnKitSetting.Size = new System.Drawing.Size(71, 28);
             this.btnKitSetting.TabIndex = 257;
@@ -373,7 +375,7 @@
             this.onprotect_blacklist_dispenser.ConfigName = "protect.blacklist.dispenser";
             this.onprotect_blacklist_dispenser.FormText = "禁止发射器发射集合";
             this.onprotect_blacklist_dispenser.Location = new System.Drawing.Point(611, 310);
-            this.onprotect_blacklist_dispenser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.onprotect_blacklist_dispenser.Margin = new System.Windows.Forms.Padding(4);
             this.onprotect_blacklist_dispenser.Name = "onprotect_blacklist_dispenser";
             this.onprotect_blacklist_dispenser.Size = new System.Drawing.Size(71, 28);
             this.onprotect_blacklist_dispenser.TabIndex = 256;
@@ -385,7 +387,7 @@
             this.onprotect_blacklist_piston.ConfigName = "protect.blacklist.piston";
             this.onprotect_blacklist_piston.FormText = "禁止活塞推动方块集合";
             this.onprotect_blacklist_piston.Location = new System.Drawing.Point(611, 282);
-            this.onprotect_blacklist_piston.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.onprotect_blacklist_piston.Margin = new System.Windows.Forms.Padding(4);
             this.onprotect_blacklist_piston.Name = "onprotect_blacklist_piston";
             this.onprotect_blacklist_piston.Size = new System.Drawing.Size(71, 28);
             this.onprotect_blacklist_piston.TabIndex = 255;
@@ -397,7 +399,7 @@
             this.onprotect_blacklist_break.ConfigName = "protect.blacklist.break";
             this.onprotect_blacklist_break.FormText = "禁止破坏方块集合";
             this.onprotect_blacklist_break.Location = new System.Drawing.Point(611, 255);
-            this.onprotect_blacklist_break.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.onprotect_blacklist_break.Margin = new System.Windows.Forms.Padding(4);
             this.onprotect_blacklist_break.Name = "onprotect_blacklist_break";
             this.onprotect_blacklist_break.Size = new System.Drawing.Size(71, 28);
             this.onprotect_blacklist_break.TabIndex = 254;
@@ -409,7 +411,7 @@
             this.onprotect_blacklist_usage.ConfigName = "protect.blacklist.usage";
             this.onprotect_blacklist_usage.FormText = "禁止使用物品集合";
             this.onprotect_blacklist_usage.Location = new System.Drawing.Point(611, 228);
-            this.onprotect_blacklist_usage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.onprotect_blacklist_usage.Margin = new System.Windows.Forms.Padding(4);
             this.onprotect_blacklist_usage.Name = "onprotect_blacklist_usage";
             this.onprotect_blacklist_usage.Size = new System.Drawing.Size(71, 28);
             this.onprotect_blacklist_usage.TabIndex = 253;
@@ -421,7 +423,7 @@
             this.onprotect_blacklist_placement.ConfigName = "protect.blacklist.placement";
             this.onprotect_blacklist_placement.FormText = "禁止放置方块集合";
             this.onprotect_blacklist_placement.Location = new System.Drawing.Point(611, 200);
-            this.onprotect_blacklist_placement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.onprotect_blacklist_placement.Margin = new System.Windows.Forms.Padding(4);
             this.onprotect_blacklist_placement.Name = "onprotect_blacklist_placement";
             this.onprotect_blacklist_placement.Size = new System.Drawing.Size(71, 28);
             this.onprotect_blacklist_placement.TabIndex = 252;
@@ -433,7 +435,7 @@
             this.onprotect_alert_on_break.ConfigName = "protect.alert.on-break";
             this.onprotect_alert_on_break.FormText = "破坏警告方块集合";
             this.onprotect_alert_on_break.Location = new System.Drawing.Point(611, 172);
-            this.onprotect_alert_on_break.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.onprotect_alert_on_break.Margin = new System.Windows.Forms.Padding(4);
             this.onprotect_alert_on_break.Name = "onprotect_alert_on_break";
             this.onprotect_alert_on_break.Size = new System.Drawing.Size(71, 28);
             this.onprotect_alert_on_break.TabIndex = 251;
@@ -445,7 +447,7 @@
             this.onprotect_alert_on_use.ConfigName = "protect.alert.on-use";
             this.onprotect_alert_on_use.FormText = "使用警告物品集合";
             this.onprotect_alert_on_use.Location = new System.Drawing.Point(611, 145);
-            this.onprotect_alert_on_use.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.onprotect_alert_on_use.Margin = new System.Windows.Forms.Padding(4);
             this.onprotect_alert_on_use.Name = "onprotect_alert_on_use";
             this.onprotect_alert_on_use.Size = new System.Drawing.Size(71, 28);
             this.onprotect_alert_on_use.TabIndex = 250;
@@ -457,7 +459,7 @@
             this.onprotect_alert_on_placement.ConfigName = "protect.alert.on-placement";
             this.onprotect_alert_on_placement.FormText = "放置警告方块集合";
             this.onprotect_alert_on_placement.Location = new System.Drawing.Point(611, 118);
-            this.onprotect_alert_on_placement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.onprotect_alert_on_placement.Margin = new System.Windows.Forms.Padding(4);
             this.onprotect_alert_on_placement.Name = "onprotect_alert_on_placement";
             this.onprotect_alert_on_placement.Size = new System.Drawing.Size(71, 28);
             this.onprotect_alert_on_placement.TabIndex = 249;
@@ -577,7 +579,7 @@
             this.onnewbies_announce_format.ConfigName = "newbies.announce-format";
             this.onnewbies_announce_format.DefaultValue = "‘’";
             this.onnewbies_announce_format.Location = new System.Drawing.Point(611, 90);
-            this.onnewbies_announce_format.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.onnewbies_announce_format.Margin = new System.Windows.Forms.Padding(4);
             this.onnewbies_announce_format.Name = "onnewbies_announce_format";
             this.onnewbies_announce_format.Prompt = "是否显示某玩家第一次进服时的欢迎信息，取消设置为空或\'\'";
             this.onnewbies_announce_format.Size = new System.Drawing.Size(71, 28);
@@ -595,7 +597,7 @@
             "high",
             "highest"});
             this.cbrespawn_listener_priority.Location = new System.Drawing.Point(372, 639);
-            this.cbrespawn_listener_priority.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbrespawn_listener_priority.Margin = new System.Windows.Forms.Padding(4);
             this.cbrespawn_listener_priority.Name = "cbrespawn_listener_priority";
             this.cbrespawn_listener_priority.Size = new System.Drawing.Size(69, 23);
             this.cbrespawn_listener_priority.TabIndex = 230;
@@ -618,7 +620,7 @@
             this.cbnewbies_kit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbnewbies_kit.FormattingEnabled = true;
             this.cbnewbies_kit.Location = new System.Drawing.Point(372, 611);
-            this.cbnewbies_kit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbnewbies_kit.Margin = new System.Windows.Forms.Padding(4);
             this.cbnewbies_kit.Name = "cbnewbies_kit";
             this.cbnewbies_kit.Size = new System.Drawing.Size(69, 23);
             this.cbnewbies_kit.TabIndex = 228;
@@ -646,7 +648,7 @@
             "default",
             "none"});
             this.cbnewbies_spawnpoint.Location = new System.Drawing.Point(372, 584);
-            this.cbnewbies_spawnpoint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbnewbies_spawnpoint.Margin = new System.Windows.Forms.Padding(4);
             this.cbnewbies_spawnpoint.Name = "cbnewbies_spawnpoint";
             this.cbnewbies_spawnpoint.Size = new System.Drawing.Size(69, 23);
             this.cbnewbies_spawnpoint.TabIndex = 226;
@@ -684,7 +686,7 @@
             this.onrespawn_at_home.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onrespawn_at_home.IsSwitch = false;
             this.onrespawn_at_home.Location = new System.Drawing.Point(151, 644);
-            this.onrespawn_at_home.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.onrespawn_at_home.Margin = new System.Windows.Forms.Padding(5);
             this.onrespawn_at_home.Name = "onrespawn_at_home";
             this.onrespawn_at_home.Size = new System.Drawing.Size(67, 21);
             this.onrespawn_at_home.TabIndex = 224;
@@ -710,7 +712,7 @@
             this.onprotect_disable_warn_on_build_disallow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onprotect_disable_warn_on_build_disallow.IsSwitch = false;
             this.onprotect_disable_warn_on_build_disallow.Location = new System.Drawing.Point(151, 615);
-            this.onprotect_disable_warn_on_build_disallow.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.onprotect_disable_warn_on_build_disallow.Margin = new System.Windows.Forms.Padding(5);
             this.onprotect_disable_warn_on_build_disallow.Name = "onprotect_disable_warn_on_build_disallow";
             this.onprotect_disable_warn_on_build_disallow.Size = new System.Drawing.Size(67, 21);
             this.onprotect_disable_warn_on_build_disallow.TabIndex = 222;
@@ -736,7 +738,7 @@
             this.onprotect_disable_use.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onprotect_disable_use.IsSwitch = false;
             this.onprotect_disable_use.Location = new System.Drawing.Point(151, 586);
-            this.onprotect_disable_use.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.onprotect_disable_use.Margin = new System.Windows.Forms.Padding(5);
             this.onprotect_disable_use.Name = "onprotect_disable_use";
             this.onprotect_disable_use.Size = new System.Drawing.Size(67, 21);
             this.onprotect_disable_use.TabIndex = 220;
@@ -762,7 +764,7 @@
             this.onprotect_disable_build.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onprotect_disable_build.IsSwitch = false;
             this.onprotect_disable_build.Location = new System.Drawing.Point(151, 558);
-            this.onprotect_disable_build.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.onprotect_disable_build.Margin = new System.Windows.Forms.Padding(5);
             this.onprotect_disable_build.Name = "onprotect_disable_build";
             this.onprotect_disable_build.Size = new System.Drawing.Size(67, 21);
             this.onprotect_disable_build.TabIndex = 218;
@@ -782,7 +784,7 @@
             // btnEssSignsSetting
             // 
             this.btnEssSignsSetting.Location = new System.Drawing.Point(611, 338);
-            this.btnEssSignsSetting.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEssSignsSetting.Margin = new System.Windows.Forms.Padding(4);
             this.btnEssSignsSetting.Name = "btnEssSignsSetting";
             this.btnEssSignsSetting.Size = new System.Drawing.Size(71, 28);
             this.btnEssSignsSetting.TabIndex = 215;
@@ -823,7 +825,7 @@
             this.oneconomy_log_enabled.Cursor = System.Windows.Forms.Cursors.Hand;
             this.oneconomy_log_enabled.IsSwitch = false;
             this.oneconomy_log_enabled.Location = new System.Drawing.Point(151, 529);
-            this.oneconomy_log_enabled.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.oneconomy_log_enabled.Margin = new System.Windows.Forms.Padding(5);
             this.oneconomy_log_enabled.Name = "oneconomy_log_enabled";
             this.oneconomy_log_enabled.Size = new System.Drawing.Size(67, 21);
             this.oneconomy_log_enabled.TabIndex = 158;
@@ -837,7 +839,7 @@
             "￥",
             "$"});
             this.cbcurrency_symbol.Location = new System.Drawing.Point(372, 556);
-            this.cbcurrency_symbol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbcurrency_symbol.Margin = new System.Windows.Forms.Padding(4);
             this.cbcurrency_symbol.Name = "cbcurrency_symbol";
             this.cbcurrency_symbol.Size = new System.Drawing.Size(69, 23);
             this.cbcurrency_symbol.TabIndex = 163;
@@ -846,7 +848,7 @@
             // 
             this.serConfigNumericUpDown2.ConfigName = "auto-afk-kick";
             this.serConfigNumericUpDown2.Location = new System.Drawing.Point(372, 441);
-            this.serConfigNumericUpDown2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.serConfigNumericUpDown2.Margin = new System.Windows.Forms.Padding(4);
             this.serConfigNumericUpDown2.Maximum = new decimal(new int[] {
             600,
             0,
@@ -870,7 +872,7 @@
             // 
             this.nudstarting_balance.ConfigName = "starting-balance";
             this.nudstarting_balance.Location = new System.Drawing.Point(372, 470);
-            this.nudstarting_balance.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudstarting_balance.Margin = new System.Windows.Forms.Padding(4);
             this.nudstarting_balance.Maximum = new decimal(new int[] {
             1316134911,
             2328,
@@ -932,7 +934,7 @@
             // 
             this.nudchat_radius.ConfigName = "chat.radius";
             this.nudchat_radius.Location = new System.Drawing.Point(372, 269);
-            this.nudchat_radius.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudchat_radius.Margin = new System.Windows.Forms.Padding(4);
             this.nudchat_radius.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -951,7 +953,7 @@
             // 
             this.nudmin_money.ConfigName = "min-money";
             this.nudmin_money.Location = new System.Drawing.Point(372, 528);
-            this.nudmin_money.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudmin_money.Margin = new System.Windows.Forms.Padding(4);
             this.nudmin_money.Maximum = new decimal(new int[] {
             1316134911,
             2328,
@@ -965,7 +967,7 @@
             // 
             this.nudauto_afk.ConfigName = "auto-afk";
             this.nudauto_afk.Location = new System.Drawing.Point(372, 412);
-            this.nudauto_afk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudauto_afk.Margin = new System.Windows.Forms.Padding(4);
             this.nudauto_afk.Maximum = new decimal(new int[] {
             600,
             0,
@@ -1007,7 +1009,7 @@
             this.onworld_home_permissions.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onworld_home_permissions.IsSwitch = false;
             this.onworld_home_permissions.Location = new System.Drawing.Point(151, 414);
-            this.onworld_home_permissions.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.onworld_home_permissions.Margin = new System.Windows.Forms.Padding(5);
             this.onworld_home_permissions.Name = "onworld_home_permissions";
             this.onworld_home_permissions.Size = new System.Drawing.Size(67, 21);
             this.onworld_home_permissions.TabIndex = 162;
@@ -1016,7 +1018,7 @@
             // 
             this.nudmax_money.ConfigName = "max-money";
             this.nudmax_money.Location = new System.Drawing.Point(372, 499);
-            this.nudmax_money.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudmax_money.Margin = new System.Windows.Forms.Padding(4);
             this.nudmax_money.Maximum = new decimal(new int[] {
             1316134912,
             2328,
@@ -1105,7 +1107,7 @@
             this.oncancel_afk_on_move.Cursor = System.Windows.Forms.Cursors.Hand;
             this.oncancel_afk_on_move.IsSwitch = false;
             this.oncancel_afk_on_move.Location = new System.Drawing.Point(151, 500);
-            this.oncancel_afk_on_move.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.oncancel_afk_on_move.Margin = new System.Windows.Forms.Padding(5);
             this.oncancel_afk_on_move.Name = "oncancel_afk_on_move";
             this.oncancel_afk_on_move.Size = new System.Drawing.Size(67, 21);
             this.oncancel_afk_on_move.TabIndex = 143;
@@ -1144,7 +1146,7 @@
             this.onupdate_bed_at_daytime.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onupdate_bed_at_daytime.IsSwitch = false;
             this.onupdate_bed_at_daytime.Location = new System.Drawing.Point(151, 385);
-            this.onupdate_bed_at_daytime.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.onupdate_bed_at_daytime.Margin = new System.Windows.Forms.Padding(5);
             this.onupdate_bed_at_daytime.Name = "onupdate_bed_at_daytime";
             this.onupdate_bed_at_daytime.Size = new System.Drawing.Size(67, 21);
             this.onupdate_bed_at_daytime.TabIndex = 157;
@@ -1158,7 +1160,7 @@
             this.ondisable_item_pickup_while_afk.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ondisable_item_pickup_while_afk.IsSwitch = false;
             this.ondisable_item_pickup_while_afk.Location = new System.Drawing.Point(151, 471);
-            this.ondisable_item_pickup_while_afk.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ondisable_item_pickup_while_afk.Margin = new System.Windows.Forms.Padding(5);
             this.ondisable_item_pickup_while_afk.Name = "ondisable_item_pickup_while_afk";
             this.ondisable_item_pickup_while_afk.Size = new System.Drawing.Size(67, 21);
             this.ondisable_item_pickup_while_afk.TabIndex = 141;
@@ -1167,7 +1169,7 @@
             // 
             this.nudmax_tempban_time.ConfigName = "max-tempban-time";
             this.nudmax_tempban_time.Location = new System.Drawing.Point(372, 240);
-            this.nudmax_tempban_time.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudmax_tempban_time.Margin = new System.Windows.Forms.Padding(4);
             this.nudmax_tempban_time.Maximum = new decimal(new int[] {
             1410065408,
             2,
@@ -1208,7 +1210,7 @@
             this.onfreeze_afk_players.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onfreeze_afk_players.IsSwitch = false;
             this.onfreeze_afk_players.Location = new System.Drawing.Point(151, 442);
-            this.onfreeze_afk_players.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.onfreeze_afk_players.Margin = new System.Windows.Forms.Padding(5);
             this.onfreeze_afk_players.Name = "onfreeze_afk_players";
             this.onfreeze_afk_players.Size = new System.Drawing.Size(67, 21);
             this.onfreeze_afk_players.TabIndex = 139;
@@ -1234,7 +1236,7 @@
             this.onbtteleport_safety.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onbtteleport_safety.IsSwitch = false;
             this.onbtteleport_safety.Location = new System.Drawing.Point(151, 356);
-            this.onbtteleport_safety.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.onbtteleport_safety.Margin = new System.Windows.Forms.Padding(5);
             this.onbtteleport_safety.Name = "onbtteleport_safety";
             this.onbtteleport_safety.Size = new System.Drawing.Size(67, 21);
             this.onbtteleport_safety.TabIndex = 131;
@@ -1243,7 +1245,7 @@
             // 
             this.nudtpa_accept_cancellation.ConfigName = "login-attack-delay";
             this.nudtpa_accept_cancellation.Location = new System.Drawing.Point(372, 384);
-            this.nudtpa_accept_cancellation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudtpa_accept_cancellation.Margin = new System.Windows.Forms.Padding(4);
             this.nudtpa_accept_cancellation.Maximum = new decimal(new int[] {
             600,
             0,
@@ -1268,7 +1270,7 @@
             this.serConfigEditButton1.ConfigName = "chat.format";
             this.serConfigEditButton1.DefaultValue = "<{DISPLAYNAME}> {MESSAGE}";
             this.serConfigEditButton1.Location = new System.Drawing.Point(611, 62);
-            this.serConfigEditButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.serConfigEditButton1.Margin = new System.Windows.Forms.Padding(4);
             this.serConfigEditButton1.Name = "serConfigEditButton1";
             this.serConfigEditButton1.Prompt = "请修改聊天标准格式，不输入则使用默认设置";
             this.serConfigEditButton1.Size = new System.Drawing.Size(71, 28);
@@ -1329,7 +1331,7 @@
             // 
             this.nudteleport_invulnerability.ConfigName = "teleport-invulnerability";
             this.nudteleport_invulnerability.Location = new System.Drawing.Point(372, 355);
-            this.nudteleport_invulnerability.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudteleport_invulnerability.Margin = new System.Windows.Forms.Padding(4);
             this.nudteleport_invulnerability.Maximum = new decimal(new int[] {
             30,
             0,
@@ -1348,7 +1350,7 @@
             // 
             this.nudmails_per_minute.ConfigName = "mails-per-minute";
             this.nudmails_per_minute.Location = new System.Drawing.Point(372, 211);
-            this.nudmails_per_minute.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudmails_per_minute.Margin = new System.Windows.Forms.Padding(4);
             this.nudmails_per_minute.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -1396,7 +1398,7 @@
             // 
             this.nudteleport_delay.ConfigName = "teleport-delay";
             this.nudteleport_delay.Location = new System.Drawing.Point(372, 326);
-            this.nudteleport_delay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudteleport_delay.Margin = new System.Windows.Forms.Padding(4);
             this.nudteleport_delay.Maximum = new decimal(new int[] {
             30,
             0,
@@ -1420,7 +1422,7 @@
             this.serConfigButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.serConfigButton1.IsSwitch = false;
             this.serConfigButton1.Location = new System.Drawing.Point(151, 328);
-            this.serConfigButton1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.serConfigButton1.Margin = new System.Windows.Forms.Padding(5);
             this.serConfigButton1.Name = "serConfigButton1";
             this.serConfigButton1.Size = new System.Drawing.Size(67, 21);
             this.serConfigButton1.TabIndex = 211;
@@ -1441,7 +1443,7 @@
             // 
             this.nudteleport_cooldown.ConfigName = "teleport-cooldown";
             this.nudteleport_cooldown.Location = new System.Drawing.Point(372, 298);
-            this.nudteleport_cooldown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudteleport_cooldown.Margin = new System.Windows.Forms.Padding(4);
             this.nudteleport_cooldown.Maximum = new decimal(new int[] {
             120,
             0,
@@ -1461,7 +1463,7 @@
             this.nudmax_walk_speed.ConfigName = "max-walk-speed";
             this.nudmax_walk_speed.DecimalPlaces = 1;
             this.nudmax_walk_speed.Location = new System.Drawing.Point(372, 182);
-            this.nudmax_walk_speed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudmax_walk_speed.Margin = new System.Windows.Forms.Padding(4);
             this.nudmax_walk_speed.Maximum = new decimal(new int[] {
             1,
             0,
@@ -1524,7 +1526,7 @@
             this.oncustom_join_message.ConfigName = "custom-join-message";
             this.oncustom_join_message.DefaultValue = "none";
             this.oncustom_join_message.Location = new System.Drawing.Point(611, 8);
-            this.oncustom_join_message.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.oncustom_join_message.Margin = new System.Windows.Forms.Padding(4);
             this.oncustom_join_message.Name = "oncustom_join_message";
             this.oncustom_join_message.Prompt = "请输入玩家进入服务器自定义消息(none或不输入为使用默认)";
             this.oncustom_join_message.Size = new System.Drawing.Size(71, 28);
@@ -1549,7 +1551,7 @@
             this.oncustom_quit_message.ConfigName = "custom-quit-message";
             this.oncustom_quit_message.DefaultValue = "none";
             this.oncustom_quit_message.Location = new System.Drawing.Point(611, 35);
-            this.oncustom_quit_message.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.oncustom_quit_message.Margin = new System.Windows.Forms.Padding(4);
             this.oncustom_quit_message.Name = "oncustom_quit_message";
             this.oncustom_quit_message.Prompt = "请输入玩家退出服务器自定义消息(none或不输入为使用默认)";
             this.oncustom_quit_message.Size = new System.Drawing.Size(71, 28);
@@ -1566,7 +1568,7 @@
             this.onnon_ess_in_help.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onnon_ess_in_help.IsSwitch = false;
             this.onnon_ess_in_help.Location = new System.Drawing.Point(151, 299);
-            this.onnon_ess_in_help.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.onnon_ess_in_help.Margin = new System.Windows.Forms.Padding(5);
             this.onnon_ess_in_help.Name = "onnon_ess_in_help";
             this.onnon_ess_in_help.Size = new System.Drawing.Size(67, 21);
             this.onnon_ess_in_help.TabIndex = 209;
@@ -1575,7 +1577,7 @@
             // 
             this.nudoversized_stacksize.ConfigName = "oversized-stacksize";
             this.nudoversized_stacksize.Location = new System.Drawing.Point(372, 39);
-            this.nudoversized_stacksize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudoversized_stacksize.Margin = new System.Windows.Forms.Padding(4);
             this.nudoversized_stacksize.Maximum = new decimal(new int[] {
             128,
             0,
@@ -1611,7 +1613,7 @@
             // 
             this.nudspawnmob_limit.ConfigName = "spawnmob-limit";
             this.nudspawnmob_limit.Location = new System.Drawing.Point(372, 68);
-            this.nudspawnmob_limit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudspawnmob_limit.Margin = new System.Windows.Forms.Padding(4);
             this.nudspawnmob_limit.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -1631,7 +1633,7 @@
             this.nudmax_fly_speed.ConfigName = "max-fly-speed";
             this.nudmax_fly_speed.DecimalPlaces = 1;
             this.nudmax_fly_speed.Location = new System.Drawing.Point(372, 154);
-            this.nudmax_fly_speed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudmax_fly_speed.Margin = new System.Windows.Forms.Padding(4);
             this.nudmax_fly_speed.Maximum = new decimal(new int[] {
             1,
             0,
@@ -1679,7 +1681,7 @@
             // 
             this.nudsign_use_per_second.ConfigName = "sign-use-per-second";
             this.nudsign_use_per_second.Location = new System.Drawing.Point(372, 96);
-            this.nudsign_use_per_second.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudsign_use_per_second.Margin = new System.Windows.Forms.Padding(4);
             this.nudsign_use_per_second.Maximum = new decimal(new int[] {
             20,
             0,
@@ -1715,7 +1717,7 @@
             // 
             this.nudlogin_attack_delay.ConfigName = "login-attack-delay";
             this.nudlogin_attack_delay.Location = new System.Drawing.Point(372, 125);
-            this.nudlogin_attack_delay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudlogin_attack_delay.Margin = new System.Windows.Forms.Padding(4);
             this.nudlogin_attack_delay.Maximum = new decimal(new int[] {
             60,
             0,
@@ -1751,7 +1753,7 @@
             // 
             this.nuddefault_stack_size.ConfigName = "default-stack-size";
             this.nuddefault_stack_size.Location = new System.Drawing.Point(372, 10);
-            this.nuddefault_stack_size.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nuddefault_stack_size.Margin = new System.Windows.Forms.Padding(4);
             this.nuddefault_stack_size.Maximum = new decimal(new int[] {
             64,
             0,
@@ -1792,7 +1794,7 @@
             this.serConfigButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.serConfigButton2.IsSwitch = false;
             this.serConfigButton2.Location = new System.Drawing.Point(151, 270);
-            this.serConfigButton2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.serConfigButton2.Margin = new System.Windows.Forms.Padding(5);
             this.serConfigButton2.Name = "serConfigButton2";
             this.serConfigButton2.Size = new System.Drawing.Size(67, 21);
             this.serConfigButton2.TabIndex = 191;
@@ -1831,7 +1833,7 @@
             this.onunsafe_enchantments.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onunsafe_enchantments.IsSwitch = false;
             this.onunsafe_enchantments.Location = new System.Drawing.Point(151, 241);
-            this.onunsafe_enchantments.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.onunsafe_enchantments.Margin = new System.Windows.Forms.Padding(5);
             this.onunsafe_enchantments.Name = "onunsafe_enchantments";
             this.onunsafe_enchantments.Size = new System.Drawing.Size(67, 21);
             this.onunsafe_enchantments.TabIndex = 189;
@@ -1857,7 +1859,7 @@
             this.onrepair_enchanted.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onrepair_enchanted.IsSwitch = false;
             this.onrepair_enchanted.Location = new System.Drawing.Point(151, 212);
-            this.onrepair_enchanted.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.onrepair_enchanted.Margin = new System.Windows.Forms.Padding(5);
             this.onrepair_enchanted.Name = "onrepair_enchanted";
             this.onrepair_enchanted.Size = new System.Drawing.Size(67, 21);
             this.onrepair_enchanted.TabIndex = 187;
@@ -1884,7 +1886,7 @@
             this.onworld_teleport_permissions.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onworld_teleport_permissions.IsSwitch = false;
             this.onworld_teleport_permissions.Location = new System.Drawing.Point(151, 184);
-            this.onworld_teleport_permissions.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.onworld_teleport_permissions.Margin = new System.Windows.Forms.Padding(5);
             this.onworld_teleport_permissions.Name = "onworld_teleport_permissions";
             this.onworld_teleport_permissions.Size = new System.Drawing.Size(67, 21);
             this.onworld_teleport_permissions.TabIndex = 185;
@@ -1910,7 +1912,7 @@
             this.ondeath_messages.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ondeath_messages.IsSwitch = false;
             this.ondeath_messages.Location = new System.Drawing.Point(151, 126);
-            this.ondeath_messages.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ondeath_messages.Margin = new System.Windows.Forms.Padding(5);
             this.ondeath_messages.Name = "ondeath_messages";
             this.ondeath_messages.Size = new System.Drawing.Size(67, 21);
             this.ondeath_messages.TabIndex = 179;
@@ -1936,7 +1938,7 @@
             this.onallow_silent_join_quit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onallow_silent_join_quit.IsSwitch = false;
             this.onallow_silent_join_quit.Location = new System.Drawing.Point(151, 155);
-            this.onallow_silent_join_quit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.onallow_silent_join_quit.Margin = new System.Windows.Forms.Padding(5);
             this.onallow_silent_join_quit.Name = "onallow_silent_join_quit";
             this.onallow_silent_join_quit.Size = new System.Drawing.Size(67, 21);
             this.onallow_silent_join_quit.TabIndex = 177;
@@ -1962,7 +1964,7 @@
             this.onremove_god_on_disconnect.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onremove_god_on_disconnect.IsSwitch = false;
             this.onremove_god_on_disconnect.Location = new System.Drawing.Point(151, 69);
-            this.onremove_god_on_disconnect.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.onremove_god_on_disconnect.Margin = new System.Windows.Forms.Padding(5);
             this.onremove_god_on_disconnect.Name = "onremove_god_on_disconnect";
             this.onremove_god_on_disconnect.Size = new System.Drawing.Size(67, 21);
             this.onremove_god_on_disconnect.TabIndex = 175;
@@ -1988,7 +1990,7 @@
             this.ondebug.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ondebug.IsSwitch = false;
             this.ondebug.Location = new System.Drawing.Point(151, 40);
-            this.ondebug.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ondebug.Margin = new System.Windows.Forms.Padding(5);
             this.ondebug.Name = "ondebug";
             this.ondebug.Size = new System.Drawing.Size(67, 21);
             this.ondebug.TabIndex = 173;
@@ -2014,7 +2016,7 @@
             this.onper_warp_permission.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onper_warp_permission.IsSwitch = false;
             this.onper_warp_permission.Location = new System.Drawing.Point(151, 11);
-            this.onper_warp_permission.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.onper_warp_permission.Margin = new System.Windows.Forms.Padding(5);
             this.onper_warp_permission.Name = "onper_warp_permission";
             this.onper_warp_permission.Size = new System.Drawing.Size(67, 21);
             this.onper_warp_permission.TabIndex = 171;
@@ -2040,7 +2042,7 @@
             this.onwarn_on_smite.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onwarn_on_smite.IsSwitch = false;
             this.onwarn_on_smite.Location = new System.Drawing.Point(151, 98);
-            this.onwarn_on_smite.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.onwarn_on_smite.Margin = new System.Windows.Forms.Padding(5);
             this.onwarn_on_smite.Name = "onwarn_on_smite";
             this.onwarn_on_smite.Size = new System.Drawing.Size(67, 21);
             this.onwarn_on_smite.TabIndex = 167;
@@ -2048,7 +2050,7 @@
             // btnEditPhysicalSetting
             // 
             this.btnEditPhysicalSetting.Location = new System.Drawing.Point(611, 365);
-            this.btnEditPhysicalSetting.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditPhysicalSetting.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditPhysicalSetting.Name = "btnEditPhysicalSetting";
             this.btnEditPhysicalSetting.Size = new System.Drawing.Size(71, 28);
             this.btnEditPhysicalSetting.TabIndex = 135;
@@ -2065,9 +2067,9 @@
             this.gbNickNameSetting.Controls.Add(this.lbOps_name_color);
             this.gbNickNameSetting.Enabled = false;
             this.gbNickNameSetting.Location = new System.Drawing.Point(451, 469);
-            this.gbNickNameSetting.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbNickNameSetting.Margin = new System.Windows.Forms.Padding(4);
             this.gbNickNameSetting.Name = "gbNickNameSetting";
-            this.gbNickNameSetting.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbNickNameSetting.Padding = new System.Windows.Forms.Padding(4);
             this.gbNickNameSetting.Size = new System.Drawing.Size(239, 196);
             this.gbNickNameSetting.TabIndex = 128;
             this.gbNickNameSetting.TabStop = false;
@@ -2097,7 +2099,7 @@
             this.plNickName.Controls.Add(this.btnickname_prefix);
             this.plNickName.Enabled = false;
             this.plNickName.Location = new System.Drawing.Point(4, 75);
-            this.plNickName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.plNickName.Margin = new System.Windows.Forms.Padding(4);
             this.plNickName.Name = "plNickName";
             this.plNickName.Size = new System.Drawing.Size(227, 114);
             this.plNickName.TabIndex = 14;
@@ -2123,7 +2125,7 @@
             this.onadd_prefix_suffix.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onadd_prefix_suffix.IsSwitch = false;
             this.onadd_prefix_suffix.Location = new System.Drawing.Point(149, 28);
-            this.onadd_prefix_suffix.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.onadd_prefix_suffix.Margin = new System.Windows.Forms.Padding(5);
             this.onadd_prefix_suffix.Name = "onadd_prefix_suffix";
             this.onadd_prefix_suffix.Size = new System.Drawing.Size(67, 21);
             this.onadd_prefix_suffix.TabIndex = 13;
@@ -2161,7 +2163,7 @@
             this.onchange_playerlist.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onchange_playerlist.IsSwitch = false;
             this.onchange_playerlist.Location = new System.Drawing.Point(149, 2);
-            this.onchange_playerlist.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.onchange_playerlist.Margin = new System.Windows.Forms.Padding(5);
             this.onchange_playerlist.Name = "onchange_playerlist";
             this.onchange_playerlist.Size = new System.Drawing.Size(67, 21);
             this.onchange_playerlist.TabIndex = 11;
@@ -2182,7 +2184,7 @@
             // 
             this.nudmax_nick_length.ConfigName = "max-nick-length";
             this.nudmax_nick_length.Location = new System.Drawing.Point(149, 52);
-            this.nudmax_nick_length.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudmax_nick_length.Margin = new System.Windows.Forms.Padding(4);
             this.nudmax_nick_length.Minimum = new decimal(new int[] {
             2,
             0,
@@ -2202,7 +2204,7 @@
             this.btnickname_prefix.ConfigName = "nickname-prefix";
             this.btnickname_prefix.DefaultValue = null;
             this.btnickname_prefix.Location = new System.Drawing.Point(151, 81);
-            this.btnickname_prefix.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnickname_prefix.Margin = new System.Windows.Forms.Padding(4);
             this.btnickname_prefix.Name = "btnickname_prefix";
             this.btnickname_prefix.Prompt = "请修改昵称，昵称长度不允许大于设定的名称长度，否则无法显示";
             this.btnickname_prefix.Size = new System.Drawing.Size(71, 28);
@@ -2219,7 +2221,7 @@
             this.onbtchange_displayname.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onbtchange_displayname.IsSwitch = false;
             this.onbtchange_displayname.Location = new System.Drawing.Point(153, 52);
-            this.onbtchange_displayname.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.onbtchange_displayname.Margin = new System.Windows.Forms.Padding(5);
             this.onbtchange_displayname.Name = "onbtchange_displayname";
             this.onbtchange_displayname.Size = new System.Drawing.Size(67, 21);
             this.onbtchange_displayname.TabIndex = 13;
@@ -2230,7 +2232,7 @@
             this.cbOps_name_color.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbOps_name_color.FormattingEnabled = true;
             this.cbOps_name_color.Location = new System.Drawing.Point(153, 25);
-            this.cbOps_name_color.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbOps_name_color.Margin = new System.Windows.Forms.Padding(4);
             this.cbOps_name_color.Name = "cbOps_name_color";
             this.cbOps_name_color.Size = new System.Drawing.Size(69, 23);
             this.cbOps_name_color.TabIndex = 1;
@@ -2247,6 +2249,18 @@
             this.lbOps_name_color.TabIndex = 2;
             this.lbOps_name_color.Text = "OP名称颜色:";
             // 
+            // lbKitsEdit
+            // 
+            this.lbKitsEdit.AutoSize = true;
+            this.lbKitsEdit.ConfigDescription = "编辑服务器世界的礼包信息";
+            this.lbKitsEdit.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbKitsEdit.Location = new System.Drawing.Point(451, 396);
+            this.lbKitsEdit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbKitsEdit.Name = "lbKitsEdit";
+            this.lbKitsEdit.Size = new System.Drawing.Size(133, 20);
+            this.lbKitsEdit.TabIndex = 258;
+            this.lbKitsEdit.Text = "所有礼包信息编辑:";
+            // 
             // EssConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -2256,13 +2270,12 @@
             this.Controls.Add(this.tsMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "EssConfig";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ESS-1.7.10";
-            this.Load += new System.EventHandler(this.EssConfig_Load);
             this.tsMenu.ResumeLayout(false);
             this.tsMenu.PerformLayout();
             this.plAllSetting.ResumeLayout(false);
@@ -2437,5 +2450,6 @@
         private SerConfigTool.SerConfigAlertButton onprotect_blacklist_break;
         private SerConfigTool.SerConfigAlertButton onprotect_blacklist_usage;
         private System.Windows.Forms.Button btnKitSetting;
+        private SerConfigTool.SerConfigLabel lbKitsEdit;
     }
 }
