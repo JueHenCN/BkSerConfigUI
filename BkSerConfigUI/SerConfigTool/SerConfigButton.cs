@@ -73,19 +73,19 @@ namespace BkSerConfigUI.SerConfigTool
         private void OnMouseClick_Switch(object sender, EventArgs e)
         {
             IsSwitch = !IsSwitch;
-            EssConst.yaml.Edit(ConfigName, IsSwitch.ToString().ToLowerInvariant());
+            CurrencyConst.yaml.Edit(ConfigName, IsSwitch.ToString().ToLowerInvariant());
         }
 
         private void OnMouseClick_Enabled(object sender, EventArgs e)
         {
             IsSwitch = !IsSwitch;
-            List<string> configValues = EssConst.yaml.GetValues(ConfigName);
-            EssConst.yaml.FindNodeByKey(ConfigName).NodeType = Node.NodeTypes.OBJECT;
+            List<string> configValues = CurrencyConst.yaml.GetValues(ConfigName);
+            CurrencyConst.yaml.FindNodeByKey(ConfigName).NodeType = Node.NodeTypes.OBJECT;
             if (isSwitch)
                 configValues.Add(AttributeValue);
             else
                 configValues.Remove(AttributeValue);
-            EssConst.yaml.Edit(ConfigName, configValues);
+            CurrencyConst.yaml.Edit(ConfigName, configValues);
         }
 
         protected override void OnEnabledChanged(EventArgs e)
@@ -100,9 +100,9 @@ namespace BkSerConfigUI.SerConfigTool
             if (string.IsNullOrEmpty(ConfigName) || !Enabled)
                 return;
             if(ButtonTypes.SWITCH.Equals(buttonTypes))
-                IsSwitch = CurrencyUtil.ChangeBool(EssConst.yaml.GetValue(ConfigName));
+                IsSwitch = CurrencyUtil.ChangeBool(CurrencyConst.yaml.GetValue(ConfigName));
             else
-                foreach(string attValue in EssConst.yaml.GetValues(ConfigName))
+                foreach(string attValue in CurrencyConst.yaml.GetValues(ConfigName))
                     if (attValue.Equals(AttributeValue))
                     {
                         IsSwitch = true;

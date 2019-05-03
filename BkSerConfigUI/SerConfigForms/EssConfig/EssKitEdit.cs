@@ -19,7 +19,7 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            Node kitNode = SerConfigHelp.Constant.EssConst.yaml.FindNodeByKey("kits");
+            Node kitNode = SerConfigHelp.Constant.CurrencyConst.yaml.FindNodeByKey("kits");
             if (string.IsNullOrWhiteSpace(txtKitName.Text))
             {
                 MessageBox.Show("礼包名称不允许为空!", "错误提示", MessageBoxButtons.OK, MessageBoxIcon.Error);

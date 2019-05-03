@@ -18,7 +18,7 @@ namespace BkSerConfigUI.SerConfigTool
         protected override void OnMouseEnter(EventArgs e)
         {
             base.OnMouseEnter(e);
-            EssConst.ttpSettings.SetToolTip(this, ConfigDescription);
+            CurrencyConst.ttpSettings.SetToolTip(this, ConfigDescription);
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace BkSerConfigUI.SerConfigForms.EssConfig
+﻿namespace BkSerConfigUI.SerConfigForms.ResidenceConfig
 {
-    partial class EssConfig
+    partial class ResidenceConfig
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EssConfig));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResidenceConfig));
             this.tsMenu = new System.Windows.Forms.ToolStrip();
             this.OpenToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.SaveToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.plAllSetting = new System.Windows.Forms.Panel();
+            this.lbKitsEdit = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
             this.btnKitSetting = new System.Windows.Forms.Button();
             this.onprotect_blacklist_dispenser = new BkSerConfigUI.SerConfigTool.SerConfigAlertButton();
             this.onprotect_blacklist_piston = new BkSerConfigUI.SerConfigTool.SerConfigAlertButton();
@@ -52,12 +53,8 @@
             this.lbprotect_alert_on_placement = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
             this.lbnewbies_announce_format = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
             this.onnewbies_announce_format = new BkSerConfigUI.SerConfigTool.SerConfigEditButton();
-            this.cbrespawn_listener_priority = new BkSerConfigUI.SerConfigTool.SerConfigComboBox();
-            this.lbrespawn_listener_priority = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
-            this.cbnewbies_kit = new System.Windows.Forms.ComboBox();
-            this.lbnewbies_kit = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
-            this.cbnewbies_spawnpoint = new BkSerConfigUI.SerConfigTool.SerConfigComboBox();
-            this.lbnewbies_spawnpoint = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
+            this.btnGlobal_Language = new BkSerConfigUI.SerConfigTool.SerConfigComboBox();
+            this.lbGlobal_Language = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
             this.lbrespawn_at_home = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
             this.onrespawn_at_home = new BkSerConfigUI.SerConfigTool.SerConfigButton();
             this.lbprotect_disable_warn_on_build_disallow = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
@@ -71,11 +68,9 @@
             this.lbEssPhysicalSetting = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
             this.lbeconomy_log_enabled = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
             this.oneconomy_log_enabled = new BkSerConfigUI.SerConfigTool.SerConfigButton();
-            this.cbcurrency_symbol = new BkSerConfigUI.SerConfigTool.SerConfigComboBox();
             this.serConfigNumericUpDown2 = new BkSerConfigUI.SerConfigTool.SerConfigNumericUpDown();
             this.nudstarting_balance = new BkSerConfigUI.SerConfigTool.SerConfigNumericUpDown();
             this.lbworld_home_permissions = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
-            this.lbcurrency_symbol = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
             this.lbstarting_balance = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
             this.lbauto_afk_kick = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
             this.nudchat_radius = new BkSerConfigUI.SerConfigTool.SerConfigNumericUpDown();
@@ -114,12 +109,12 @@
             this.lbteleport_cooldown = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
             this.nudteleport_cooldown = new BkSerConfigUI.SerConfigTool.SerConfigNumericUpDown();
             this.nudmax_walk_speed = new BkSerConfigUI.SerConfigTool.SerConfigNumericUpDown();
-            this.lbcustom_join_message = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
-            this.lbcustom_quit_message = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
+            this.lbGlobal_SelectionToolId = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
+            this.lbGlobal_InfoToolId = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
             this.lbmax_walk_speed = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
-            this.oncustom_join_message = new BkSerConfigUI.SerConfigTool.SerConfigEditButton();
+            this.btnGlobal_SelectionToolId = new BkSerConfigUI.SerConfigTool.SerConfigEditButton();
             this.lbnon_ess_in_help = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
-            this.oncustom_quit_message = new BkSerConfigUI.SerConfigTool.SerConfigEditButton();
+            this.btnGlobal_InfoToolId = new BkSerConfigUI.SerConfigTool.SerConfigEditButton();
             this.onnon_ess_in_help = new BkSerConfigUI.SerConfigTool.SerConfigButton();
             this.nudoversized_stacksize = new BkSerConfigUI.SerConfigTool.SerConfigNumericUpDown();
             this.lbspawnmob_limit = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
@@ -141,34 +136,19 @@
             this.onrepair_enchanted = new BkSerConfigUI.SerConfigTool.SerConfigButton();
             this.lbworld_teleport_permissions = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
             this.onworld_teleport_permissions = new BkSerConfigUI.SerConfigTool.SerConfigButton();
-            this.lbdeath_messages = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
-            this.ondeath_messages = new BkSerConfigUI.SerConfigTool.SerConfigButton();
-            this.lballow_silent_join_quit = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
-            this.onallow_silent_join_quit = new BkSerConfigUI.SerConfigTool.SerConfigButton();
-            this.lbremove_god_on_disconnect = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
-            this.onremove_god_on_disconnect = new BkSerConfigUI.SerConfigTool.SerConfigButton();
-            this.lbdebug = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
-            this.ondebug = new BkSerConfigUI.SerConfigTool.SerConfigButton();
-            this.lbper_warp_permission = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
-            this.onper_warp_permission = new BkSerConfigUI.SerConfigTool.SerConfigButton();
-            this.lbwarn_on_smite = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
-            this.onwarn_on_smite = new BkSerConfigUI.SerConfigTool.SerConfigButton();
+            this.lbGlobal_Selection_IgnoreYInSubzone = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
+            this.btnGlobal_Selection_IgnoreYInSubzone = new BkSerConfigUI.SerConfigTool.SerConfigButton();
+            this.lbGlobal_Selection_NoCostForYBlocks = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
+            this.btnGlobal_Selection_NoCostForYBlocks = new BkSerConfigUI.SerConfigTool.SerConfigButton();
+            this.lbGlobal_versionCheck = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
+            this.btnGlobal_versionCheck = new BkSerConfigUI.SerConfigTool.SerConfigButton();
+            this.lbGlobal_OfflineMode = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
+            this.btnGlobal_OfflineMode = new BkSerConfigUI.SerConfigTool.SerConfigButton();
+            this.lbGlobal_UUIDConvertion = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
+            this.btnGlobal_UUIDConvertion = new BkSerConfigUI.SerConfigTool.SerConfigButton();
+            this.lbGlobal_Selection_IgnoreY = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
+            this.btnGlobal_Selection_IgnoreY = new BkSerConfigUI.SerConfigTool.SerConfigButton();
             this.btnEditPhysicalSetting = new System.Windows.Forms.Button();
-            this.gbNickNameSetting = new System.Windows.Forms.GroupBox();
-            this.lbchange_displayname = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
-            this.plNickName = new System.Windows.Forms.Panel();
-            this.lbadd_prefix_suffix = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
-            this.onadd_prefix_suffix = new BkSerConfigUI.SerConfigTool.SerConfigButton();
-            this.lbchange_playerlist = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
-            this.lbnickname_prefix = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
-            this.onchange_playerlist = new BkSerConfigUI.SerConfigTool.SerConfigButton();
-            this.lbmax_nick_length = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
-            this.nudmax_nick_length = new BkSerConfigUI.SerConfigTool.SerConfigNumericUpDown();
-            this.btnickname_prefix = new BkSerConfigUI.SerConfigTool.SerConfigEditButton();
-            this.onbtchange_displayname = new BkSerConfigUI.SerConfigTool.SerConfigButton();
-            this.cbOps_name_color = new BkSerConfigUI.SerConfigTool.SerConfigComboBox();
-            this.lbOps_name_color = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
-            this.lbKitsEdit = new BkSerConfigUI.SerConfigTool.SerConfigLabel();
             this.tsMenu.SuspendLayout();
             this.plAllSetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.serConfigNumericUpDown2)).BeginInit();
@@ -190,9 +170,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudsign_use_per_second)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudlogin_attack_delay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuddefault_stack_size)).BeginInit();
-            this.gbNickNameSetting.SuspendLayout();
-            this.plNickName.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudmax_nick_length)).BeginInit();
             this.SuspendLayout();
             // 
             // tsMenu
@@ -249,12 +226,8 @@
             this.plAllSetting.Controls.Add(this.lbprotect_alert_on_placement);
             this.plAllSetting.Controls.Add(this.lbnewbies_announce_format);
             this.plAllSetting.Controls.Add(this.onnewbies_announce_format);
-            this.plAllSetting.Controls.Add(this.cbrespawn_listener_priority);
-            this.plAllSetting.Controls.Add(this.lbrespawn_listener_priority);
-            this.plAllSetting.Controls.Add(this.cbnewbies_kit);
-            this.plAllSetting.Controls.Add(this.lbnewbies_kit);
-            this.plAllSetting.Controls.Add(this.cbnewbies_spawnpoint);
-            this.plAllSetting.Controls.Add(this.lbnewbies_spawnpoint);
+            this.plAllSetting.Controls.Add(this.btnGlobal_Language);
+            this.plAllSetting.Controls.Add(this.lbGlobal_Language);
             this.plAllSetting.Controls.Add(this.lbrespawn_at_home);
             this.plAllSetting.Controls.Add(this.onrespawn_at_home);
             this.plAllSetting.Controls.Add(this.lbprotect_disable_warn_on_build_disallow);
@@ -268,11 +241,9 @@
             this.plAllSetting.Controls.Add(this.lbEssPhysicalSetting);
             this.plAllSetting.Controls.Add(this.lbeconomy_log_enabled);
             this.plAllSetting.Controls.Add(this.oneconomy_log_enabled);
-            this.plAllSetting.Controls.Add(this.cbcurrency_symbol);
             this.plAllSetting.Controls.Add(this.serConfigNumericUpDown2);
             this.plAllSetting.Controls.Add(this.nudstarting_balance);
             this.plAllSetting.Controls.Add(this.lbworld_home_permissions);
-            this.plAllSetting.Controls.Add(this.lbcurrency_symbol);
             this.plAllSetting.Controls.Add(this.lbstarting_balance);
             this.plAllSetting.Controls.Add(this.lbauto_afk_kick);
             this.plAllSetting.Controls.Add(this.nudchat_radius);
@@ -311,12 +282,12 @@
             this.plAllSetting.Controls.Add(this.lbteleport_cooldown);
             this.plAllSetting.Controls.Add(this.nudteleport_cooldown);
             this.plAllSetting.Controls.Add(this.nudmax_walk_speed);
-            this.plAllSetting.Controls.Add(this.lbcustom_join_message);
-            this.plAllSetting.Controls.Add(this.lbcustom_quit_message);
+            this.plAllSetting.Controls.Add(this.lbGlobal_SelectionToolId);
+            this.plAllSetting.Controls.Add(this.lbGlobal_InfoToolId);
             this.plAllSetting.Controls.Add(this.lbmax_walk_speed);
-            this.plAllSetting.Controls.Add(this.oncustom_join_message);
+            this.plAllSetting.Controls.Add(this.btnGlobal_SelectionToolId);
             this.plAllSetting.Controls.Add(this.lbnon_ess_in_help);
-            this.plAllSetting.Controls.Add(this.oncustom_quit_message);
+            this.plAllSetting.Controls.Add(this.btnGlobal_InfoToolId);
             this.plAllSetting.Controls.Add(this.onnon_ess_in_help);
             this.plAllSetting.Controls.Add(this.nudoversized_stacksize);
             this.plAllSetting.Controls.Add(this.lbspawnmob_limit);
@@ -338,26 +309,37 @@
             this.plAllSetting.Controls.Add(this.onrepair_enchanted);
             this.plAllSetting.Controls.Add(this.lbworld_teleport_permissions);
             this.plAllSetting.Controls.Add(this.onworld_teleport_permissions);
-            this.plAllSetting.Controls.Add(this.lbdeath_messages);
-            this.plAllSetting.Controls.Add(this.ondeath_messages);
-            this.plAllSetting.Controls.Add(this.lballow_silent_join_quit);
-            this.plAllSetting.Controls.Add(this.onallow_silent_join_quit);
-            this.plAllSetting.Controls.Add(this.lbremove_god_on_disconnect);
-            this.plAllSetting.Controls.Add(this.onremove_god_on_disconnect);
-            this.plAllSetting.Controls.Add(this.lbdebug);
-            this.plAllSetting.Controls.Add(this.ondebug);
-            this.plAllSetting.Controls.Add(this.lbper_warp_permission);
-            this.plAllSetting.Controls.Add(this.onper_warp_permission);
-            this.plAllSetting.Controls.Add(this.lbwarn_on_smite);
-            this.plAllSetting.Controls.Add(this.onwarn_on_smite);
+            this.plAllSetting.Controls.Add(this.lbGlobal_Selection_IgnoreYInSubzone);
+            this.plAllSetting.Controls.Add(this.btnGlobal_Selection_IgnoreYInSubzone);
+            this.plAllSetting.Controls.Add(this.lbGlobal_Selection_NoCostForYBlocks);
+            this.plAllSetting.Controls.Add(this.btnGlobal_Selection_NoCostForYBlocks);
+            this.plAllSetting.Controls.Add(this.lbGlobal_versionCheck);
+            this.plAllSetting.Controls.Add(this.btnGlobal_versionCheck);
+            this.plAllSetting.Controls.Add(this.lbGlobal_OfflineMode);
+            this.plAllSetting.Controls.Add(this.btnGlobal_OfflineMode);
+            this.plAllSetting.Controls.Add(this.lbGlobal_UUIDConvertion);
+            this.plAllSetting.Controls.Add(this.btnGlobal_UUIDConvertion);
+            this.plAllSetting.Controls.Add(this.lbGlobal_Selection_IgnoreY);
+            this.plAllSetting.Controls.Add(this.btnGlobal_Selection_IgnoreY);
             this.plAllSetting.Controls.Add(this.btnEditPhysicalSetting);
-            this.plAllSetting.Controls.Add(this.gbNickNameSetting);
             this.plAllSetting.Enabled = false;
             this.plAllSetting.Location = new System.Drawing.Point(16, 35);
             this.plAllSetting.Margin = new System.Windows.Forms.Padding(4);
             this.plAllSetting.Name = "plAllSetting";
             this.plAllSetting.Size = new System.Drawing.Size(699, 669);
             this.plAllSetting.TabIndex = 128;
+            // 
+            // lbKitsEdit
+            // 
+            this.lbKitsEdit.AutoSize = true;
+            this.lbKitsEdit.ConfigDescription = "编辑服务器世界的礼包信息";
+            this.lbKitsEdit.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbKitsEdit.Location = new System.Drawing.Point(451, 396);
+            this.lbKitsEdit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbKitsEdit.Name = "lbKitsEdit";
+            this.lbKitsEdit.Size = new System.Drawing.Size(133, 20);
+            this.lbKitsEdit.TabIndex = 258;
+            this.lbKitsEdit.Text = "所有礼包信息编辑:";
             // 
             // btnKitSetting
             // 
@@ -368,7 +350,6 @@
             this.btnKitSetting.TabIndex = 257;
             this.btnKitSetting.Text = "编辑";
             this.btnKitSetting.UseVisualStyleBackColor = true;
-            this.btnKitSetting.Click += new System.EventHandler(this.btnKitSetting_Click);
             // 
             // onprotect_blacklist_dispenser
             // 
@@ -587,83 +568,31 @@
             this.onnewbies_announce_format.Text = "编辑";
             this.onnewbies_announce_format.UseVisualStyleBackColor = true;
             // 
-            // cbrespawn_listener_priority
+            // btnGlobal_Language
             // 
-            this.cbrespawn_listener_priority.ConfigName = "respawn-listener-priority";
-            this.cbrespawn_listener_priority.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbrespawn_listener_priority.FormattingEnabled = true;
-            this.cbrespawn_listener_priority.Items.AddRange(new object[] {
-            "lowest",
-            "high",
-            "highest"});
-            this.cbrespawn_listener_priority.Location = new System.Drawing.Point(372, 639);
-            this.cbrespawn_listener_priority.Margin = new System.Windows.Forms.Padding(4);
-            this.cbrespawn_listener_priority.Name = "cbrespawn_listener_priority";
-            this.cbrespawn_listener_priority.Size = new System.Drawing.Size(69, 23);
-            this.cbrespawn_listener_priority.TabIndex = 230;
-            // 
-            // lbrespawn_listener_priority
-            // 
-            this.lbrespawn_listener_priority.AutoSize = true;
-            this.lbrespawn_listener_priority.ConfigDescription = "设置为 lowest, 使用 Multiverse 处理重生,设置为 high, 使用 EssentialsSpawn插件 处理重生,设置为 highest, 强" +
-    "制使用 EssentialsSpawn插件 处理重生。";
-            this.lbrespawn_listener_priority.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbrespawn_listener_priority.Location = new System.Drawing.Point(225, 641);
-            this.lbrespawn_listener_priority.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbrespawn_listener_priority.Name = "lbrespawn_listener_priority";
-            this.lbrespawn_listener_priority.Size = new System.Drawing.Size(73, 20);
-            this.lbrespawn_listener_priority.TabIndex = 229;
-            this.lbrespawn_listener_priority.Text = "重生处理:";
-            // 
-            // cbnewbies_kit
-            // 
-            this.cbnewbies_kit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbnewbies_kit.FormattingEnabled = true;
-            this.cbnewbies_kit.Location = new System.Drawing.Point(372, 611);
-            this.cbnewbies_kit.Margin = new System.Windows.Forms.Padding(4);
-            this.cbnewbies_kit.Name = "cbnewbies_kit";
-            this.cbnewbies_kit.Size = new System.Drawing.Size(69, 23);
-            this.cbnewbies_kit.TabIndex = 228;
-            this.cbnewbies_kit.DropDownClosed += new System.EventHandler(this.cbnewbies_kit_DropDownClosed);
-            this.cbnewbies_kit.EnabledChanged += new System.EventHandler(this.cbnewbies_kit_EnabledChanged);
-            // 
-            // lbnewbies_kit
-            // 
-            this.lbnewbies_kit.AutoSize = true;
-            this.lbnewbies_kit.ConfigDescription = "是否想要玩家第一次进入服务器时赠送新手礼物? 设置为空禁用此功，该赠送不花费金钱";
-            this.lbnewbies_kit.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbnewbies_kit.Location = new System.Drawing.Point(225, 614);
-            this.lbnewbies_kit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbnewbies_kit.Name = "lbnewbies_kit";
-            this.lbnewbies_kit.Size = new System.Drawing.Size(103, 20);
-            this.lbnewbies_kit.TabIndex = 227;
-            this.lbnewbies_kit.Text = "赠送新手礼包:";
-            // 
-            // cbnewbies_spawnpoint
-            // 
-            this.cbnewbies_spawnpoint.ConfigName = "newbies.spawnpoint";
-            this.cbnewbies_spawnpoint.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbnewbies_spawnpoint.FormattingEnabled = true;
-            this.cbnewbies_spawnpoint.Items.AddRange(new object[] {
+            this.btnGlobal_Language.ConfigName = "Global.Language";
+            this.btnGlobal_Language.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.btnGlobal_Language.FormattingEnabled = true;
+            this.btnGlobal_Language.Items.AddRange(new object[] {
             "default",
             "none"});
-            this.cbnewbies_spawnpoint.Location = new System.Drawing.Point(372, 584);
-            this.cbnewbies_spawnpoint.Margin = new System.Windows.Forms.Padding(4);
-            this.cbnewbies_spawnpoint.Name = "cbnewbies_spawnpoint";
-            this.cbnewbies_spawnpoint.Size = new System.Drawing.Size(69, 23);
-            this.cbnewbies_spawnpoint.TabIndex = 226;
+            this.btnGlobal_Language.Location = new System.Drawing.Point(372, 584);
+            this.btnGlobal_Language.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGlobal_Language.Name = "btnGlobal_Language";
+            this.btnGlobal_Language.Size = new System.Drawing.Size(69, 23);
+            this.btnGlobal_Language.TabIndex = 226;
             // 
-            // lbnewbies_spawnpoint
+            // lbGlobal_Language
             // 
-            this.lbnewbies_spawnpoint.AutoSize = true;
-            this.lbnewbies_spawnpoint.ConfigDescription = "玩家出生和重生点，default为插件设置，设为none为世界自带点";
-            this.lbnewbies_spawnpoint.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbnewbies_spawnpoint.Location = new System.Drawing.Point(225, 586);
-            this.lbnewbies_spawnpoint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbnewbies_spawnpoint.Name = "lbnewbies_spawnpoint";
-            this.lbnewbies_spawnpoint.Size = new System.Drawing.Size(103, 20);
-            this.lbnewbies_spawnpoint.TabIndex = 225;
-            this.lbnewbies_spawnpoint.Text = "死亡和重生点:";
+            this.lbGlobal_Language.AutoSize = true;
+            this.lbGlobal_Language.ConfigDescription = "玩家出生和重生点，default为插件设置，设为none为世界自带点";
+            this.lbGlobal_Language.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbGlobal_Language.Location = new System.Drawing.Point(225, 586);
+            this.lbGlobal_Language.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbGlobal_Language.Name = "lbGlobal_Language";
+            this.lbGlobal_Language.Size = new System.Drawing.Size(103, 20);
+            this.lbGlobal_Language.TabIndex = 225;
+            this.lbGlobal_Language.Text = "插件语言设置:";
             // 
             // lbrespawn_at_home
             // 
@@ -790,7 +719,6 @@
             this.btnEssSignsSetting.TabIndex = 215;
             this.btnEssSignsSetting.Text = "编辑";
             this.btnEssSignsSetting.UseVisualStyleBackColor = true;
-            this.btnEssSignsSetting.Click += new System.EventHandler(this.btnEssSignsSetting_Click);
             // 
             // lbEssPhysicalSetting
             // 
@@ -829,20 +757,6 @@
             this.oneconomy_log_enabled.Name = "oneconomy_log_enabled";
             this.oneconomy_log_enabled.Size = new System.Drawing.Size(67, 21);
             this.oneconomy_log_enabled.TabIndex = 158;
-            // 
-            // cbcurrency_symbol
-            // 
-            this.cbcurrency_symbol.ConfigName = "currency-symbol";
-            this.cbcurrency_symbol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbcurrency_symbol.FormattingEnabled = true;
-            this.cbcurrency_symbol.Items.AddRange(new object[] {
-            "￥",
-            "$"});
-            this.cbcurrency_symbol.Location = new System.Drawing.Point(372, 556);
-            this.cbcurrency_symbol.Margin = new System.Windows.Forms.Padding(4);
-            this.cbcurrency_symbol.Name = "cbcurrency_symbol";
-            this.cbcurrency_symbol.Size = new System.Drawing.Size(69, 23);
-            this.cbcurrency_symbol.TabIndex = 163;
             // 
             // serConfigNumericUpDown2
             // 
@@ -893,18 +807,6 @@
             this.lbworld_home_permissions.Size = new System.Drawing.Size(133, 20);
             this.lbworld_home_permissions.TabIndex = 159;
             this.lbworld_home_permissions.Text = "允许跨世界传回家:";
-            // 
-            // lbcurrency_symbol
-            // 
-            this.lbcurrency_symbol.AutoSize = true;
-            this.lbcurrency_symbol.ConfigDescription = "货币符号设置，考虑到大部分人接触的货币，这里只放了RMB(¥)和美刀($)，如需显示其他货币符号，请自行修改本体文件";
-            this.lbcurrency_symbol.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbcurrency_symbol.Location = new System.Drawing.Point(228, 559);
-            this.lbcurrency_symbol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbcurrency_symbol.Name = "lbcurrency_symbol";
-            this.lbcurrency_symbol.Size = new System.Drawing.Size(73, 20);
-            this.lbcurrency_symbol.TabIndex = 148;
-            this.lbcurrency_symbol.Text = "货币符号:";
             // 
             // lbstarting_balance
             // 
@@ -1483,31 +1385,29 @@
             0,
             65536});
             // 
-            // lbcustom_join_message
+            // lbGlobal_SelectionToolId
             // 
-            this.lbcustom_join_message.AutoSize = true;
-            this.lbcustom_join_message.ConfigDescription = "你可以在这儿设置自定义进入游戏消息, 设置为\"none\"则禁用此功能\n，支持使用颜色代码， 使用 {USERNAME} 将会代替玩家名称, 使用 {PLAYER}" +
-    " 将会代替玩家的显示名称";
-            this.lbcustom_join_message.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbcustom_join_message.Location = new System.Drawing.Point(451, 11);
-            this.lbcustom_join_message.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbcustom_join_message.Name = "lbcustom_join_message";
-            this.lbcustom_join_message.Size = new System.Drawing.Size(133, 20);
-            this.lbcustom_join_message.TabIndex = 181;
-            this.lbcustom_join_message.Text = "自定进入游戏提示:";
+            this.lbGlobal_SelectionToolId.AutoSize = true;
+            this.lbGlobal_SelectionToolId.ConfigDescription = "设置自定义圈地工具";
+            this.lbGlobal_SelectionToolId.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbGlobal_SelectionToolId.Location = new System.Drawing.Point(451, 11);
+            this.lbGlobal_SelectionToolId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbGlobal_SelectionToolId.Name = "lbGlobal_SelectionToolId";
+            this.lbGlobal_SelectionToolId.Size = new System.Drawing.Size(118, 20);
+            this.lbGlobal_SelectionToolId.TabIndex = 181;
+            this.lbGlobal_SelectionToolId.Text = "自定义圈地工具:";
             // 
-            // lbcustom_quit_message
+            // lbGlobal_InfoToolId
             // 
-            this.lbcustom_quit_message.AutoSize = true;
-            this.lbcustom_quit_message.ConfigDescription = "你可以在这儿设置自定义退出游戏消息, 设置为\"none\"则禁用此功能\n，支持使用颜色代码， 使用 {USERNAME} 将会代替玩家名称, 使用 {PLAYER}" +
-    " 将会代替玩家的显示名称";
-            this.lbcustom_quit_message.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbcustom_quit_message.Location = new System.Drawing.Point(451, 39);
-            this.lbcustom_quit_message.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbcustom_quit_message.Name = "lbcustom_quit_message";
-            this.lbcustom_quit_message.Size = new System.Drawing.Size(133, 20);
-            this.lbcustom_quit_message.TabIndex = 180;
-            this.lbcustom_quit_message.Text = "自定退出游戏提示:";
+            this.lbGlobal_InfoToolId.AutoSize = true;
+            this.lbGlobal_InfoToolId.ConfigDescription = "自定义查看领地信息工具，点击领地任意一个地方，它就会显示领地信息，默认为287(线)";
+            this.lbGlobal_InfoToolId.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbGlobal_InfoToolId.Location = new System.Drawing.Point(451, 39);
+            this.lbGlobal_InfoToolId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbGlobal_InfoToolId.Name = "lbGlobal_InfoToolId";
+            this.lbGlobal_InfoToolId.Size = new System.Drawing.Size(133, 20);
+            this.lbGlobal_InfoToolId.TabIndex = 180;
+            this.lbGlobal_InfoToolId.Text = "查看领地信息工具:";
             // 
             // lbmax_walk_speed
             // 
@@ -1521,18 +1421,18 @@
             this.lbmax_walk_speed.TabIndex = 200;
             this.lbmax_walk_speed.Text = "行走最大速度:";
             // 
-            // oncustom_join_message
+            // btnGlobal_SelectionToolId
             // 
-            this.oncustom_join_message.ConfigName = "custom-join-message";
-            this.oncustom_join_message.DefaultValue = "none";
-            this.oncustom_join_message.Location = new System.Drawing.Point(611, 8);
-            this.oncustom_join_message.Margin = new System.Windows.Forms.Padding(4);
-            this.oncustom_join_message.Name = "oncustom_join_message";
-            this.oncustom_join_message.Prompt = "请输入玩家进入服务器自定义消息(none或不输入为使用默认)";
-            this.oncustom_join_message.Size = new System.Drawing.Size(71, 28);
-            this.oncustom_join_message.TabIndex = 182;
-            this.oncustom_join_message.Text = "编辑";
-            this.oncustom_join_message.UseVisualStyleBackColor = true;
+            this.btnGlobal_SelectionToolId.ConfigName = "Global.SelectionToolId";
+            this.btnGlobal_SelectionToolId.DefaultValue = "200";
+            this.btnGlobal_SelectionToolId.Location = new System.Drawing.Point(611, 8);
+            this.btnGlobal_SelectionToolId.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGlobal_SelectionToolId.Name = "btnGlobal_SelectionToolId";
+            this.btnGlobal_SelectionToolId.Prompt = "请输入服务器圈地工具,默认为使用木棍,不推荐修改(none或不输入为使用默认)";
+            this.btnGlobal_SelectionToolId.Size = new System.Drawing.Size(71, 28);
+            this.btnGlobal_SelectionToolId.TabIndex = 182;
+            this.btnGlobal_SelectionToolId.Text = "编辑";
+            this.btnGlobal_SelectionToolId.UseVisualStyleBackColor = true;
             // 
             // lbnon_ess_in_help
             // 
@@ -1546,18 +1446,18 @@
             this.lbnon_ess_in_help.TabIndex = 208;
             this.lbnon_ess_in_help.Text = "/help插件指令:";
             // 
-            // oncustom_quit_message
+            // btnGlobal_InfoToolId
             // 
-            this.oncustom_quit_message.ConfigName = "custom-quit-message";
-            this.oncustom_quit_message.DefaultValue = "none";
-            this.oncustom_quit_message.Location = new System.Drawing.Point(611, 35);
-            this.oncustom_quit_message.Margin = new System.Windows.Forms.Padding(4);
-            this.oncustom_quit_message.Name = "oncustom_quit_message";
-            this.oncustom_quit_message.Prompt = "请输入玩家退出服务器自定义消息(none或不输入为使用默认)";
-            this.oncustom_quit_message.Size = new System.Drawing.Size(71, 28);
-            this.oncustom_quit_message.TabIndex = 183;
-            this.oncustom_quit_message.Text = "编辑";
-            this.oncustom_quit_message.UseVisualStyleBackColor = true;
+            this.btnGlobal_InfoToolId.ConfigName = "Global.InfoToolId";
+            this.btnGlobal_InfoToolId.DefaultValue = "287";
+            this.btnGlobal_InfoToolId.Location = new System.Drawing.Point(611, 35);
+            this.btnGlobal_InfoToolId.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGlobal_InfoToolId.Name = "btnGlobal_InfoToolId";
+            this.btnGlobal_InfoToolId.Prompt = "请输入玩家退出服务器自定义消息(none或不输入为使用默认)";
+            this.btnGlobal_InfoToolId.Size = new System.Drawing.Size(71, 28);
+            this.btnGlobal_InfoToolId.TabIndex = 183;
+            this.btnGlobal_InfoToolId.Text = "编辑";
+            this.btnGlobal_InfoToolId.UseVisualStyleBackColor = true;
             // 
             // onnon_ess_in_help
             // 
@@ -1891,161 +1791,161 @@
             this.onworld_teleport_permissions.Size = new System.Drawing.Size(67, 21);
             this.onworld_teleport_permissions.TabIndex = 185;
             // 
-            // lbdeath_messages
+            // lbGlobal_Selection_IgnoreYInSubzone
             // 
-            this.lbdeath_messages.AutoSize = true;
-            this.lbdeath_messages.ConfigDescription = "选择是否关闭Minecraft自带的死亡提示";
-            this.lbdeath_messages.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbdeath_messages.Location = new System.Drawing.Point(4, 126);
-            this.lbdeath_messages.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbdeath_messages.Name = "lbdeath_messages";
-            this.lbdeath_messages.Size = new System.Drawing.Size(103, 20);
-            this.lbdeath_messages.TabIndex = 178;
-            this.lbdeath_messages.Text = "关闭死亡提示:";
+            this.lbGlobal_Selection_IgnoreYInSubzone.AutoSize = true;
+            this.lbGlobal_Selection_IgnoreYInSubzone.ConfigDescription = "取消圈地高度，大致意思是直接选择X,Y两点后，高度自动默认为从基岩到天空";
+            this.lbGlobal_Selection_IgnoreYInSubzone.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbGlobal_Selection_IgnoreYInSubzone.Location = new System.Drawing.Point(4, 126);
+            this.lbGlobal_Selection_IgnoreYInSubzone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbGlobal_Selection_IgnoreYInSubzone.Name = "lbGlobal_Selection_IgnoreYInSubzone";
+            this.lbGlobal_Selection_IgnoreYInSubzone.Size = new System.Drawing.Size(103, 20);
+            this.lbGlobal_Selection_IgnoreYInSubzone.TabIndex = 178;
+            this.lbGlobal_Selection_IgnoreYInSubzone.Text = "取消圈地高度:";
             // 
-            // ondeath_messages
+            // btnGlobal_Selection_IgnoreYInSubzone
             // 
-            this.ondeath_messages.AttributeValue = null;
-            this.ondeath_messages.BackColor = System.Drawing.Color.Transparent;
-            this.ondeath_messages.ButtonType = BkSerConfigUI.SerConfigTool.SerConfigButton.ButtonTypes.SWITCH;
-            this.ondeath_messages.ConfigName = "death-messages";
-            this.ondeath_messages.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ondeath_messages.IsSwitch = false;
-            this.ondeath_messages.Location = new System.Drawing.Point(151, 126);
-            this.ondeath_messages.Margin = new System.Windows.Forms.Padding(5);
-            this.ondeath_messages.Name = "ondeath_messages";
-            this.ondeath_messages.Size = new System.Drawing.Size(67, 21);
-            this.ondeath_messages.TabIndex = 179;
+            this.btnGlobal_Selection_IgnoreYInSubzone.AttributeValue = null;
+            this.btnGlobal_Selection_IgnoreYInSubzone.BackColor = System.Drawing.Color.Transparent;
+            this.btnGlobal_Selection_IgnoreYInSubzone.ButtonType = BkSerConfigUI.SerConfigTool.SerConfigButton.ButtonTypes.SWITCH;
+            this.btnGlobal_Selection_IgnoreYInSubzone.ConfigName = "Global.Selection.IgnoreYInSubzone";
+            this.btnGlobal_Selection_IgnoreYInSubzone.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGlobal_Selection_IgnoreYInSubzone.IsSwitch = false;
+            this.btnGlobal_Selection_IgnoreYInSubzone.Location = new System.Drawing.Point(151, 126);
+            this.btnGlobal_Selection_IgnoreYInSubzone.Margin = new System.Windows.Forms.Padding(5);
+            this.btnGlobal_Selection_IgnoreYInSubzone.Name = "btnGlobal_Selection_IgnoreYInSubzone";
+            this.btnGlobal_Selection_IgnoreYInSubzone.Size = new System.Drawing.Size(67, 21);
+            this.btnGlobal_Selection_IgnoreYInSubzone.TabIndex = 179;
             // 
-            // lballow_silent_join_quit
+            // lbGlobal_Selection_NoCostForYBlocks
             // 
-            this.lballow_silent_join_quit.AutoSize = true;
-            this.lballow_silent_join_quit.ConfigDescription = "当启用后, 具有对应权限的玩家加入、离开游戏将不会在公屏上显示消息";
-            this.lballow_silent_join_quit.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lballow_silent_join_quit.Location = new System.Drawing.Point(4, 155);
-            this.lballow_silent_join_quit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lballow_silent_join_quit.Name = "lballow_silent_join_quit";
-            this.lballow_silent_join_quit.Size = new System.Drawing.Size(133, 20);
-            this.lballow_silent_join_quit.TabIndex = 176;
-            this.lballow_silent_join_quit.Text = "关闭进退游戏提示:";
+            this.lbGlobal_Selection_NoCostForYBlocks.AutoSize = true;
+            this.lbGlobal_Selection_NoCostForYBlocks.ConfigDescription = "正常圈地计算高度为x(长度)*z(宽度)*y(高度)*价格，开启该选项后y高度将不在计算入总价";
+            this.lbGlobal_Selection_NoCostForYBlocks.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbGlobal_Selection_NoCostForYBlocks.Location = new System.Drawing.Point(4, 155);
+            this.lbGlobal_Selection_NoCostForYBlocks.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbGlobal_Selection_NoCostForYBlocks.Name = "lbGlobal_Selection_NoCostForYBlocks";
+            this.lbGlobal_Selection_NoCostForYBlocks.Size = new System.Drawing.Size(133, 20);
+            this.lbGlobal_Selection_NoCostForYBlocks.TabIndex = 176;
+            this.lbGlobal_Selection_NoCostForYBlocks.Text = "圈地价格取消高度:";
             // 
-            // onallow_silent_join_quit
+            // btnGlobal_Selection_NoCostForYBlocks
             // 
-            this.onallow_silent_join_quit.AttributeValue = null;
-            this.onallow_silent_join_quit.BackColor = System.Drawing.Color.Transparent;
-            this.onallow_silent_join_quit.ButtonType = BkSerConfigUI.SerConfigTool.SerConfigButton.ButtonTypes.SWITCH;
-            this.onallow_silent_join_quit.ConfigName = "allow-silent-join-quit";
-            this.onallow_silent_join_quit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.onallow_silent_join_quit.IsSwitch = false;
-            this.onallow_silent_join_quit.Location = new System.Drawing.Point(151, 155);
-            this.onallow_silent_join_quit.Margin = new System.Windows.Forms.Padding(5);
-            this.onallow_silent_join_quit.Name = "onallow_silent_join_quit";
-            this.onallow_silent_join_quit.Size = new System.Drawing.Size(67, 21);
-            this.onallow_silent_join_quit.TabIndex = 177;
+            this.btnGlobal_Selection_NoCostForYBlocks.AttributeValue = null;
+            this.btnGlobal_Selection_NoCostForYBlocks.BackColor = System.Drawing.Color.Transparent;
+            this.btnGlobal_Selection_NoCostForYBlocks.ButtonType = BkSerConfigUI.SerConfigTool.SerConfigButton.ButtonTypes.SWITCH;
+            this.btnGlobal_Selection_NoCostForYBlocks.ConfigName = "Global.Selection.NoCostForYBlocks";
+            this.btnGlobal_Selection_NoCostForYBlocks.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGlobal_Selection_NoCostForYBlocks.IsSwitch = false;
+            this.btnGlobal_Selection_NoCostForYBlocks.Location = new System.Drawing.Point(151, 155);
+            this.btnGlobal_Selection_NoCostForYBlocks.Margin = new System.Windows.Forms.Padding(5);
+            this.btnGlobal_Selection_NoCostForYBlocks.Name = "btnGlobal_Selection_NoCostForYBlocks";
+            this.btnGlobal_Selection_NoCostForYBlocks.Size = new System.Drawing.Size(67, 21);
+            this.btnGlobal_Selection_NoCostForYBlocks.TabIndex = 177;
             // 
-            // lbremove_god_on_disconnect
+            // lbGlobal_versionCheck
             // 
-            this.lbremove_god_on_disconnect.AutoSize = true;
-            this.lbremove_god_on_disconnect.ConfigDescription = "当玩家退出时,是否关闭他的上帝模式";
-            this.lbremove_god_on_disconnect.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbremove_god_on_disconnect.Location = new System.Drawing.Point(4, 69);
-            this.lbremove_god_on_disconnect.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbremove_god_on_disconnect.Name = "lbremove_god_on_disconnect";
-            this.lbremove_god_on_disconnect.Size = new System.Drawing.Size(133, 20);
-            this.lbremove_god_on_disconnect.TabIndex = 174;
-            this.lbremove_god_on_disconnect.Text = "退出移除上帝权限:";
+            this.lbGlobal_versionCheck.AutoSize = true;
+            this.lbGlobal_versionCheck.ConfigDescription = "";
+            this.lbGlobal_versionCheck.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbGlobal_versionCheck.Location = new System.Drawing.Point(4, 69);
+            this.lbGlobal_versionCheck.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbGlobal_versionCheck.Name = "lbGlobal_versionCheck";
+            this.lbGlobal_versionCheck.Size = new System.Drawing.Size(133, 20);
+            this.lbGlobal_versionCheck.TabIndex = 174;
+            this.lbGlobal_versionCheck.Text = "检测新版本并提示:";
             // 
-            // onremove_god_on_disconnect
+            // btnGlobal_versionCheck
             // 
-            this.onremove_god_on_disconnect.AttributeValue = null;
-            this.onremove_god_on_disconnect.BackColor = System.Drawing.Color.Transparent;
-            this.onremove_god_on_disconnect.ButtonType = BkSerConfigUI.SerConfigTool.SerConfigButton.ButtonTypes.SWITCH;
-            this.onremove_god_on_disconnect.ConfigName = "remove-god-on-disconnect";
-            this.onremove_god_on_disconnect.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.onremove_god_on_disconnect.IsSwitch = false;
-            this.onremove_god_on_disconnect.Location = new System.Drawing.Point(151, 69);
-            this.onremove_god_on_disconnect.Margin = new System.Windows.Forms.Padding(5);
-            this.onremove_god_on_disconnect.Name = "onremove_god_on_disconnect";
-            this.onremove_god_on_disconnect.Size = new System.Drawing.Size(67, 21);
-            this.onremove_god_on_disconnect.TabIndex = 175;
+            this.btnGlobal_versionCheck.AttributeValue = null;
+            this.btnGlobal_versionCheck.BackColor = System.Drawing.Color.Transparent;
+            this.btnGlobal_versionCheck.ButtonType = BkSerConfigUI.SerConfigTool.SerConfigButton.ButtonTypes.SWITCH;
+            this.btnGlobal_versionCheck.ConfigName = "Global.versionCheck";
+            this.btnGlobal_versionCheck.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGlobal_versionCheck.IsSwitch = false;
+            this.btnGlobal_versionCheck.Location = new System.Drawing.Point(151, 69);
+            this.btnGlobal_versionCheck.Margin = new System.Windows.Forms.Padding(5);
+            this.btnGlobal_versionCheck.Name = "btnGlobal_versionCheck";
+            this.btnGlobal_versionCheck.Size = new System.Drawing.Size(67, 21);
+            this.btnGlobal_versionCheck.TabIndex = 175;
             // 
-            // lbdebug
+            // lbGlobal_OfflineMode
             // 
-            this.lbdebug.AutoSize = true;
-            this.lbdebug.ConfigDescription = "是否在服务器窗口上显示更多的输出信息";
-            this.lbdebug.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbdebug.Location = new System.Drawing.Point(4, 40);
-            this.lbdebug.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbdebug.Name = "lbdebug";
-            this.lbdebug.Size = new System.Drawing.Size(118, 20);
-            this.lbdebug.TabIndex = 172;
-            this.lbdebug.Text = "服务器更多信息:";
+            this.lbGlobal_OfflineMode.AutoSize = true;
+            this.lbGlobal_OfflineMode.ConfigDescription = "设置当前服务器是否为非正版服务器";
+            this.lbGlobal_OfflineMode.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbGlobal_OfflineMode.Location = new System.Drawing.Point(4, 40);
+            this.lbGlobal_OfflineMode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbGlobal_OfflineMode.Name = "lbGlobal_OfflineMode";
+            this.lbGlobal_OfflineMode.Size = new System.Drawing.Size(133, 20);
+            this.lbGlobal_OfflineMode.TabIndex = 172;
+            this.lbGlobal_OfflineMode.Text = "是否为离线服务器:";
             // 
-            // ondebug
+            // btnGlobal_OfflineMode
             // 
-            this.ondebug.AttributeValue = null;
-            this.ondebug.BackColor = System.Drawing.Color.Transparent;
-            this.ondebug.ButtonType = BkSerConfigUI.SerConfigTool.SerConfigButton.ButtonTypes.SWITCH;
-            this.ondebug.ConfigName = "debug";
-            this.ondebug.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ondebug.IsSwitch = false;
-            this.ondebug.Location = new System.Drawing.Point(151, 40);
-            this.ondebug.Margin = new System.Windows.Forms.Padding(5);
-            this.ondebug.Name = "ondebug";
-            this.ondebug.Size = new System.Drawing.Size(67, 21);
-            this.ondebug.TabIndex = 173;
+            this.btnGlobal_OfflineMode.AttributeValue = null;
+            this.btnGlobal_OfflineMode.BackColor = System.Drawing.Color.Transparent;
+            this.btnGlobal_OfflineMode.ButtonType = BkSerConfigUI.SerConfigTool.SerConfigButton.ButtonTypes.SWITCH;
+            this.btnGlobal_OfflineMode.ConfigName = "Global.OfflineMode";
+            this.btnGlobal_OfflineMode.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGlobal_OfflineMode.IsSwitch = false;
+            this.btnGlobal_OfflineMode.Location = new System.Drawing.Point(151, 40);
+            this.btnGlobal_OfflineMode.Margin = new System.Windows.Forms.Padding(5);
+            this.btnGlobal_OfflineMode.Name = "btnGlobal_OfflineMode";
+            this.btnGlobal_OfflineMode.Size = new System.Drawing.Size(67, 21);
+            this.btnGlobal_OfflineMode.TabIndex = 173;
             // 
-            // lbper_warp_permission
+            // lbGlobal_UUIDConvertion
             // 
-            this.lbper_warp_permission.AutoSize = true;
-            this.lbper_warp_permission.ConfigDescription = "是否为每个地标启用单独的传送权限";
-            this.lbper_warp_permission.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbper_warp_permission.Location = new System.Drawing.Point(4, 11);
-            this.lbper_warp_permission.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbper_warp_permission.Name = "lbper_warp_permission";
-            this.lbper_warp_permission.Size = new System.Drawing.Size(133, 20);
-            this.lbper_warp_permission.TabIndex = 170;
-            this.lbper_warp_permission.Text = "地标单独传送权限:";
+            this.lbGlobal_UUIDConvertion.AutoSize = true;
+            this.lbGlobal_UUIDConvertion.ConfigDescription = "非正版服务器一般不启用UUID";
+            this.lbGlobal_UUIDConvertion.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbGlobal_UUIDConvertion.Location = new System.Drawing.Point(4, 11);
+            this.lbGlobal_UUIDConvertion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbGlobal_UUIDConvertion.Name = "lbGlobal_UUIDConvertion";
+            this.lbGlobal_UUIDConvertion.Size = new System.Drawing.Size(110, 20);
+            this.lbGlobal_UUIDConvertion.TabIndex = 170;
+            this.lbGlobal_UUIDConvertion.Text = "是否启用UUID:";
             // 
-            // onper_warp_permission
+            // btnGlobal_UUIDConvertion
             // 
-            this.onper_warp_permission.AttributeValue = null;
-            this.onper_warp_permission.BackColor = System.Drawing.Color.Transparent;
-            this.onper_warp_permission.ButtonType = BkSerConfigUI.SerConfigTool.SerConfigButton.ButtonTypes.SWITCH;
-            this.onper_warp_permission.ConfigName = "per-warp-permission";
-            this.onper_warp_permission.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.onper_warp_permission.IsSwitch = false;
-            this.onper_warp_permission.Location = new System.Drawing.Point(151, 11);
-            this.onper_warp_permission.Margin = new System.Windows.Forms.Padding(5);
-            this.onper_warp_permission.Name = "onper_warp_permission";
-            this.onper_warp_permission.Size = new System.Drawing.Size(67, 21);
-            this.onper_warp_permission.TabIndex = 171;
+            this.btnGlobal_UUIDConvertion.AttributeValue = null;
+            this.btnGlobal_UUIDConvertion.BackColor = System.Drawing.Color.Transparent;
+            this.btnGlobal_UUIDConvertion.ButtonType = BkSerConfigUI.SerConfigTool.SerConfigButton.ButtonTypes.SWITCH;
+            this.btnGlobal_UUIDConvertion.ConfigName = "Global.UUIDConvertion";
+            this.btnGlobal_UUIDConvertion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGlobal_UUIDConvertion.IsSwitch = false;
+            this.btnGlobal_UUIDConvertion.Location = new System.Drawing.Point(151, 11);
+            this.btnGlobal_UUIDConvertion.Margin = new System.Windows.Forms.Padding(5);
+            this.btnGlobal_UUIDConvertion.Name = "btnGlobal_UUIDConvertion";
+            this.btnGlobal_UUIDConvertion.Size = new System.Drawing.Size(67, 21);
+            this.btnGlobal_UUIDConvertion.TabIndex = 171;
             // 
-            // lbwarn_on_smite
+            // lbGlobal_Selection_IgnoreY
             // 
-            this.lbwarn_on_smite.AutoSize = true;
-            this.lbwarn_on_smite.ConfigDescription = "当管理员使用\"/lightning\"(闪电)时是否提醒玩家";
-            this.lbwarn_on_smite.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbwarn_on_smite.Location = new System.Drawing.Point(4, 98);
-            this.lbwarn_on_smite.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbwarn_on_smite.Name = "lbwarn_on_smite";
-            this.lbwarn_on_smite.Size = new System.Drawing.Size(133, 20);
-            this.lbwarn_on_smite.TabIndex = 166;
-            this.lbwarn_on_smite.Text = "闪电命令提醒玩家:";
+            this.lbGlobal_Selection_IgnoreY.AutoSize = true;
+            this.lbGlobal_Selection_IgnoreY.ConfigDescription = "是否取消圈地高度限制，圈地可以从基岩到天空的高度都允许圈";
+            this.lbGlobal_Selection_IgnoreY.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbGlobal_Selection_IgnoreY.Location = new System.Drawing.Point(4, 98);
+            this.lbGlobal_Selection_IgnoreY.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbGlobal_Selection_IgnoreY.Name = "lbGlobal_Selection_IgnoreY";
+            this.lbGlobal_Selection_IgnoreY.Size = new System.Drawing.Size(133, 20);
+            this.lbGlobal_Selection_IgnoreY.TabIndex = 166;
+            this.lbGlobal_Selection_IgnoreY.Text = "忽略圈地高度限制:";
             // 
-            // onwarn_on_smite
+            // btnGlobal_Selection_IgnoreY
             // 
-            this.onwarn_on_smite.AttributeValue = null;
-            this.onwarn_on_smite.BackColor = System.Drawing.Color.Transparent;
-            this.onwarn_on_smite.ButtonType = BkSerConfigUI.SerConfigTool.SerConfigButton.ButtonTypes.SWITCH;
-            this.onwarn_on_smite.ConfigName = "warn-on-smite";
-            this.onwarn_on_smite.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.onwarn_on_smite.IsSwitch = false;
-            this.onwarn_on_smite.Location = new System.Drawing.Point(151, 98);
-            this.onwarn_on_smite.Margin = new System.Windows.Forms.Padding(5);
-            this.onwarn_on_smite.Name = "onwarn_on_smite";
-            this.onwarn_on_smite.Size = new System.Drawing.Size(67, 21);
-            this.onwarn_on_smite.TabIndex = 167;
+            this.btnGlobal_Selection_IgnoreY.AttributeValue = null;
+            this.btnGlobal_Selection_IgnoreY.BackColor = System.Drawing.Color.Transparent;
+            this.btnGlobal_Selection_IgnoreY.ButtonType = BkSerConfigUI.SerConfigTool.SerConfigButton.ButtonTypes.SWITCH;
+            this.btnGlobal_Selection_IgnoreY.ConfigName = "Global.Selection.IgnoreY";
+            this.btnGlobal_Selection_IgnoreY.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGlobal_Selection_IgnoreY.IsSwitch = false;
+            this.btnGlobal_Selection_IgnoreY.Location = new System.Drawing.Point(151, 98);
+            this.btnGlobal_Selection_IgnoreY.Margin = new System.Windows.Forms.Padding(5);
+            this.btnGlobal_Selection_IgnoreY.Name = "btnGlobal_Selection_IgnoreY";
+            this.btnGlobal_Selection_IgnoreY.Size = new System.Drawing.Size(67, 21);
+            this.btnGlobal_Selection_IgnoreY.TabIndex = 167;
             // 
             // btnEditPhysicalSetting
             // 
@@ -2056,212 +1956,8 @@
             this.btnEditPhysicalSetting.TabIndex = 135;
             this.btnEditPhysicalSetting.Text = "编辑";
             this.btnEditPhysicalSetting.UseVisualStyleBackColor = true;
-            this.btnEditPhysicalSetting.Click += new System.EventHandler(this.btnEditPhysicalSetting_Click);
             // 
-            // gbNickNameSetting
-            // 
-            this.gbNickNameSetting.Controls.Add(this.lbchange_displayname);
-            this.gbNickNameSetting.Controls.Add(this.plNickName);
-            this.gbNickNameSetting.Controls.Add(this.onbtchange_displayname);
-            this.gbNickNameSetting.Controls.Add(this.cbOps_name_color);
-            this.gbNickNameSetting.Controls.Add(this.lbOps_name_color);
-            this.gbNickNameSetting.Enabled = false;
-            this.gbNickNameSetting.Location = new System.Drawing.Point(451, 469);
-            this.gbNickNameSetting.Margin = new System.Windows.Forms.Padding(4);
-            this.gbNickNameSetting.Name = "gbNickNameSetting";
-            this.gbNickNameSetting.Padding = new System.Windows.Forms.Padding(4);
-            this.gbNickNameSetting.Size = new System.Drawing.Size(239, 196);
-            this.gbNickNameSetting.TabIndex = 128;
-            this.gbNickNameSetting.TabStop = false;
-            this.gbNickNameSetting.Text = "昵称配置";
-            // 
-            // lbchange_displayname
-            // 
-            this.lbchange_displayname.AutoSize = true;
-            this.lbchange_displayname.ConfigDescription = "设置是否使用其他插件来设置玩家昵称";
-            this.lbchange_displayname.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbchange_displayname.Location = new System.Drawing.Point(8, 52);
-            this.lbchange_displayname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbchange_displayname.Name = "lbchange_displayname";
-            this.lbchange_displayname.Size = new System.Drawing.Size(133, 20);
-            this.lbchange_displayname.TabIndex = 12;
-            this.lbchange_displayname.Text = "当前插件配置昵称:";
-            // 
-            // plNickName
-            // 
-            this.plNickName.Controls.Add(this.lbadd_prefix_suffix);
-            this.plNickName.Controls.Add(this.onadd_prefix_suffix);
-            this.plNickName.Controls.Add(this.lbchange_playerlist);
-            this.plNickName.Controls.Add(this.lbnickname_prefix);
-            this.plNickName.Controls.Add(this.onchange_playerlist);
-            this.plNickName.Controls.Add(this.lbmax_nick_length);
-            this.plNickName.Controls.Add(this.nudmax_nick_length);
-            this.plNickName.Controls.Add(this.btnickname_prefix);
-            this.plNickName.Enabled = false;
-            this.plNickName.Location = new System.Drawing.Point(4, 75);
-            this.plNickName.Margin = new System.Windows.Forms.Padding(4);
-            this.plNickName.Name = "plNickName";
-            this.plNickName.Size = new System.Drawing.Size(227, 114);
-            this.plNickName.TabIndex = 14;
-            // 
-            // lbadd_prefix_suffix
-            // 
-            this.lbadd_prefix_suffix.AutoSize = true;
-            this.lbadd_prefix_suffix.ConfigDescription = "是否添加前缀与后缀";
-            this.lbadd_prefix_suffix.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbadd_prefix_suffix.Location = new System.Drawing.Point(4, 30);
-            this.lbadd_prefix_suffix.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbadd_prefix_suffix.Name = "lbadd_prefix_suffix";
-            this.lbadd_prefix_suffix.Size = new System.Drawing.Size(73, 20);
-            this.lbadd_prefix_suffix.TabIndex = 12;
-            this.lbadd_prefix_suffix.Text = "显示昵称:";
-            // 
-            // onadd_prefix_suffix
-            // 
-            this.onadd_prefix_suffix.AttributeValue = null;
-            this.onadd_prefix_suffix.BackColor = System.Drawing.Color.Transparent;
-            this.onadd_prefix_suffix.ButtonType = BkSerConfigUI.SerConfigTool.SerConfigButton.ButtonTypes.SWITCH;
-            this.onadd_prefix_suffix.ConfigName = "add-prefix-suffix";
-            this.onadd_prefix_suffix.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.onadd_prefix_suffix.IsSwitch = false;
-            this.onadd_prefix_suffix.Location = new System.Drawing.Point(149, 28);
-            this.onadd_prefix_suffix.Margin = new System.Windows.Forms.Padding(5);
-            this.onadd_prefix_suffix.Name = "onadd_prefix_suffix";
-            this.onadd_prefix_suffix.Size = new System.Drawing.Size(67, 21);
-            this.onadd_prefix_suffix.TabIndex = 13;
-            // 
-            // lbchange_playerlist
-            // 
-            this.lbchange_playerlist.AutoSize = true;
-            this.lbchange_playerlist.ConfigDescription = "设置玩家的昵称是否显示到Tab列表中";
-            this.lbchange_playerlist.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbchange_playerlist.Location = new System.Drawing.Point(4, 2);
-            this.lbchange_playerlist.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbchange_playerlist.Name = "lbchange_playerlist";
-            this.lbchange_playerlist.Size = new System.Drawing.Size(130, 20);
-            this.lbchange_playerlist.TabIndex = 10;
-            this.lbchange_playerlist.Text = "Tab列表显示昵称:";
-            // 
-            // lbnickname_prefix
-            // 
-            this.lbnickname_prefix.AutoSize = true;
-            this.lbnickname_prefix.ConfigDescription = "设置玩家的前置昵称，点击后面按钮修改";
-            this.lbnickname_prefix.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbnickname_prefix.Location = new System.Drawing.Point(4, 85);
-            this.lbnickname_prefix.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbnickname_prefix.Name = "lbnickname_prefix";
-            this.lbnickname_prefix.Size = new System.Drawing.Size(103, 20);
-            this.lbnickname_prefix.TabIndex = 3;
-            this.lbnickname_prefix.Text = "玩家前缀昵称:";
-            // 
-            // onchange_playerlist
-            // 
-            this.onchange_playerlist.AttributeValue = null;
-            this.onchange_playerlist.BackColor = System.Drawing.Color.Transparent;
-            this.onchange_playerlist.ButtonType = BkSerConfigUI.SerConfigTool.SerConfigButton.ButtonTypes.SWITCH;
-            this.onchange_playerlist.ConfigName = "change-playerlist";
-            this.onchange_playerlist.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.onchange_playerlist.IsSwitch = false;
-            this.onchange_playerlist.Location = new System.Drawing.Point(149, 2);
-            this.onchange_playerlist.Margin = new System.Windows.Forms.Padding(5);
-            this.onchange_playerlist.Name = "onchange_playerlist";
-            this.onchange_playerlist.Size = new System.Drawing.Size(67, 21);
-            this.onchange_playerlist.TabIndex = 11;
-            // 
-            // lbmax_nick_length
-            // 
-            this.lbmax_nick_length.AutoSize = true;
-            this.lbmax_nick_length.ConfigDescription = "设置玩家的名称长度,包含昵称在内";
-            this.lbmax_nick_length.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbmax_nick_length.Location = new System.Drawing.Point(4, 58);
-            this.lbmax_nick_length.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbmax_nick_length.Name = "lbmax_nick_length";
-            this.lbmax_nick_length.Size = new System.Drawing.Size(103, 20);
-            this.lbmax_nick_length.TabIndex = 6;
-            this.lbmax_nick_length.Text = "玩家名称长度:";
-            // 
-            // nudmax_nick_length
-            // 
-            this.nudmax_nick_length.ConfigName = "max-nick-length";
-            this.nudmax_nick_length.Location = new System.Drawing.Point(149, 52);
-            this.nudmax_nick_length.Margin = new System.Windows.Forms.Padding(4);
-            this.nudmax_nick_length.Minimum = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.nudmax_nick_length.Name = "nudmax_nick_length";
-            this.nudmax_nick_length.Size = new System.Drawing.Size(71, 25);
-            this.nudmax_nick_length.TabIndex = 7;
-            this.nudmax_nick_length.Value = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            // 
-            // btnickname_prefix
-            // 
-            this.btnickname_prefix.ConfigName = "nickname-prefix";
-            this.btnickname_prefix.DefaultValue = null;
-            this.btnickname_prefix.Location = new System.Drawing.Point(151, 81);
-            this.btnickname_prefix.Margin = new System.Windows.Forms.Padding(4);
-            this.btnickname_prefix.Name = "btnickname_prefix";
-            this.btnickname_prefix.Prompt = "请修改昵称，昵称长度不允许大于设定的名称长度，否则无法显示";
-            this.btnickname_prefix.Size = new System.Drawing.Size(71, 28);
-            this.btnickname_prefix.TabIndex = 5;
-            this.btnickname_prefix.Text = "编辑";
-            this.btnickname_prefix.UseVisualStyleBackColor = true;
-            // 
-            // onbtchange_displayname
-            // 
-            this.onbtchange_displayname.AttributeValue = null;
-            this.onbtchange_displayname.BackColor = System.Drawing.Color.Transparent;
-            this.onbtchange_displayname.ButtonType = BkSerConfigUI.SerConfigTool.SerConfigButton.ButtonTypes.SWITCH;
-            this.onbtchange_displayname.ConfigName = "change-displayname";
-            this.onbtchange_displayname.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.onbtchange_displayname.IsSwitch = false;
-            this.onbtchange_displayname.Location = new System.Drawing.Point(153, 52);
-            this.onbtchange_displayname.Margin = new System.Windows.Forms.Padding(5);
-            this.onbtchange_displayname.Name = "onbtchange_displayname";
-            this.onbtchange_displayname.Size = new System.Drawing.Size(67, 21);
-            this.onbtchange_displayname.TabIndex = 13;
-            // 
-            // cbOps_name_color
-            // 
-            this.cbOps_name_color.ConfigName = "ops-name-color";
-            this.cbOps_name_color.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbOps_name_color.FormattingEnabled = true;
-            this.cbOps_name_color.Location = new System.Drawing.Point(153, 25);
-            this.cbOps_name_color.Margin = new System.Windows.Forms.Padding(4);
-            this.cbOps_name_color.Name = "cbOps_name_color";
-            this.cbOps_name_color.Size = new System.Drawing.Size(69, 23);
-            this.cbOps_name_color.TabIndex = 1;
-            // 
-            // lbOps_name_color
-            // 
-            this.lbOps_name_color.AutoSize = true;
-            this.lbOps_name_color.ConfigDescription = "OP(管理员)名字的颜色代码,选择0~9或a~f其中的一个,选择\'none\'不使用特殊颜色，具体对应颜色，请自行查询";
-            this.lbOps_name_color.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbOps_name_color.Location = new System.Drawing.Point(8, 28);
-            this.lbOps_name_color.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbOps_name_color.Name = "lbOps_name_color";
-            this.lbOps_name_color.Size = new System.Drawing.Size(94, 20);
-            this.lbOps_name_color.TabIndex = 2;
-            this.lbOps_name_color.Text = "OP名称颜色:";
-            // 
-            // lbKitsEdit
-            // 
-            this.lbKitsEdit.AutoSize = true;
-            this.lbKitsEdit.ConfigDescription = "编辑服务器世界的礼包信息";
-            this.lbKitsEdit.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbKitsEdit.Location = new System.Drawing.Point(451, 396);
-            this.lbKitsEdit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbKitsEdit.Name = "lbKitsEdit";
-            this.lbKitsEdit.Size = new System.Drawing.Size(133, 20);
-            this.lbKitsEdit.TabIndex = 258;
-            this.lbKitsEdit.Text = "所有礼包信息编辑:";
-            // 
-            // EssConfig
+            // ResidenceConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -2272,10 +1968,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.Name = "EssConfig";
+            this.Name = "ResidenceConfig";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ESS-1.7.10";
+            this.Text = "Residence-1.7.10";
             this.tsMenu.ResumeLayout(false);
             this.tsMenu.PerformLayout();
             this.plAllSetting.ResumeLayout(false);
@@ -2299,11 +1995,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudsign_use_per_second)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudlogin_attack_delay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuddefault_stack_size)).EndInit();
-            this.gbNickNameSetting.ResumeLayout(false);
-            this.gbNickNameSetting.PerformLayout();
-            this.plNickName.ResumeLayout(false);
-            this.plNickName.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudmax_nick_length)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2318,11 +2009,9 @@
         private SerConfigTool.SerConfigLabel lbEssPhysicalSetting;
         private SerConfigTool.SerConfigLabel lbeconomy_log_enabled;
         private SerConfigTool.SerConfigButton oneconomy_log_enabled;
-        private SerConfigTool.SerConfigComboBox cbcurrency_symbol;
         private SerConfigTool.SerConfigNumericUpDown serConfigNumericUpDown2;
         private SerConfigTool.SerConfigNumericUpDown nudstarting_balance;
         private SerConfigTool.SerConfigLabel lbworld_home_permissions;
-        private SerConfigTool.SerConfigLabel lbcurrency_symbol;
         private SerConfigTool.SerConfigLabel lbstarting_balance;
         private SerConfigTool.SerConfigLabel lbauto_afk_kick;
         private SerConfigTool.SerConfigNumericUpDown nudchat_radius;
@@ -2361,12 +2050,12 @@
         private SerConfigTool.SerConfigLabel lbteleport_cooldown;
         private SerConfigTool.SerConfigNumericUpDown nudteleport_cooldown;
         private SerConfigTool.SerConfigNumericUpDown nudmax_walk_speed;
-        private SerConfigTool.SerConfigLabel lbcustom_join_message;
-        private SerConfigTool.SerConfigLabel lbcustom_quit_message;
+        private SerConfigTool.SerConfigLabel lbGlobal_SelectionToolId;
+        private SerConfigTool.SerConfigLabel lbGlobal_InfoToolId;
         private SerConfigTool.SerConfigLabel lbmax_walk_speed;
-        private SerConfigTool.SerConfigEditButton oncustom_join_message;
+        private SerConfigTool.SerConfigEditButton btnGlobal_SelectionToolId;
         private SerConfigTool.SerConfigLabel lbnon_ess_in_help;
-        private SerConfigTool.SerConfigEditButton oncustom_quit_message;
+        private SerConfigTool.SerConfigEditButton btnGlobal_InfoToolId;
         private SerConfigTool.SerConfigButton onnon_ess_in_help;
         private SerConfigTool.SerConfigNumericUpDown nudoversized_stacksize;
         private SerConfigTool.SerConfigLabel lbspawnmob_limit;
@@ -2388,41 +2077,23 @@
         private SerConfigTool.SerConfigButton onrepair_enchanted;
         private SerConfigTool.SerConfigLabel lbworld_teleport_permissions;
         private SerConfigTool.SerConfigButton onworld_teleport_permissions;
-        private SerConfigTool.SerConfigLabel lbdeath_messages;
-        private SerConfigTool.SerConfigButton ondeath_messages;
-        private SerConfigTool.SerConfigLabel lballow_silent_join_quit;
-        private SerConfigTool.SerConfigButton onallow_silent_join_quit;
-        private SerConfigTool.SerConfigLabel lbremove_god_on_disconnect;
-        private SerConfigTool.SerConfigButton onremove_god_on_disconnect;
-        private SerConfigTool.SerConfigLabel lbdebug;
-        private SerConfigTool.SerConfigButton ondebug;
-        private SerConfigTool.SerConfigLabel lbper_warp_permission;
-        private SerConfigTool.SerConfigButton onper_warp_permission;
-        private SerConfigTool.SerConfigLabel lbwarn_on_smite;
-        private SerConfigTool.SerConfigButton onwarn_on_smite;
+        private SerConfigTool.SerConfigLabel lbGlobal_Selection_IgnoreYInSubzone;
+        private SerConfigTool.SerConfigButton btnGlobal_Selection_IgnoreYInSubzone;
+        private SerConfigTool.SerConfigLabel lbGlobal_Selection_NoCostForYBlocks;
+        private SerConfigTool.SerConfigButton btnGlobal_Selection_NoCostForYBlocks;
+        private SerConfigTool.SerConfigLabel lbGlobal_versionCheck;
+        private SerConfigTool.SerConfigButton btnGlobal_versionCheck;
+        private SerConfigTool.SerConfigLabel lbGlobal_OfflineMode;
+        private SerConfigTool.SerConfigButton btnGlobal_OfflineMode;
+        private SerConfigTool.SerConfigLabel lbGlobal_UUIDConvertion;
+        private SerConfigTool.SerConfigButton btnGlobal_UUIDConvertion;
+        private SerConfigTool.SerConfigLabel lbGlobal_Selection_IgnoreY;
+        private SerConfigTool.SerConfigButton btnGlobal_Selection_IgnoreY;
         private System.Windows.Forms.Button btnEditPhysicalSetting;
-        private System.Windows.Forms.GroupBox gbNickNameSetting;
-        private SerConfigTool.SerConfigLabel lbchange_displayname;
-        private System.Windows.Forms.Panel plNickName;
-        private SerConfigTool.SerConfigLabel lbadd_prefix_suffix;
-        private SerConfigTool.SerConfigButton onadd_prefix_suffix;
-        private SerConfigTool.SerConfigLabel lbchange_playerlist;
-        private SerConfigTool.SerConfigLabel lbnickname_prefix;
-        private SerConfigTool.SerConfigButton onchange_playerlist;
-        private SerConfigTool.SerConfigLabel lbmax_nick_length;
-        private SerConfigTool.SerConfigNumericUpDown nudmax_nick_length;
-        private SerConfigTool.SerConfigEditButton btnickname_prefix;
-        private SerConfigTool.SerConfigButton onbtchange_displayname;
-        private SerConfigTool.SerConfigComboBox cbOps_name_color;
-        private SerConfigTool.SerConfigLabel lbOps_name_color;
         private System.Windows.Forms.Button btnEssSignsSetting;
         private SerConfigTool.SerConfigLabel lbEssSignsSetting;
-        private SerConfigTool.SerConfigComboBox cbrespawn_listener_priority;
-        private SerConfigTool.SerConfigLabel lbrespawn_listener_priority;
-        private System.Windows.Forms.ComboBox cbnewbies_kit;
-        private SerConfigTool.SerConfigLabel lbnewbies_kit;
-        private SerConfigTool.SerConfigComboBox cbnewbies_spawnpoint;
-        private SerConfigTool.SerConfigLabel lbnewbies_spawnpoint;
+        private SerConfigTool.SerConfigComboBox btnGlobal_Language;
+        private SerConfigTool.SerConfigLabel lbGlobal_Language;
         private SerConfigTool.SerConfigLabel lbrespawn_at_home;
         private SerConfigTool.SerConfigButton onrespawn_at_home;
         private SerConfigTool.SerConfigLabel lbprotect_disable_warn_on_build_disallow;

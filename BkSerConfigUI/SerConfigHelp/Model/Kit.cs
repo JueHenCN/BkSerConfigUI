@@ -114,7 +114,7 @@ namespace BkSerConfigUI.SerConfigHelp.Model
                         {
                             int x = 0;
                         }*/
-                        ItemEnchanting.Add(Constant.EssConst.ENCHANTINGS.Find(
+                        ItemEnchanting.Add(Constant.CurrencyConst.ENCHANTINGS.Find(
                             (Enchanting en) => en.Name.Equals(kitAttribute[0])));
                         break;
                 }

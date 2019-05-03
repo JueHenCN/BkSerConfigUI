@@ -106,6 +106,18 @@ namespace BkSerConfigUI.SerConfigHelp.Util
         /// <returns>该键对应的节点</returns>
         public Node FindNodeByKey(string key)
         {
+            return FindNodeByKey(key, "");
+        }
+
+        /// <summary>
+        /// 根据键寻找节点多级获取使用"."分级
+        /// 例如：key1.key2.key3
+        /// </summary>
+        /// <param name="key">需要获取的键</param>
+        /// <param name="nodeList">节点集合</param>
+        /// <returns>该键对应的节点</returns>
+        public Node FindNodeByKey(string key,string description)
+        {
             if (null == rootNode) return null;
             string[] ks = key.Split('.');
             try
@@ -114,6 +126,8 @@ namespace BkSerConfigUI.SerConfigHelp.Util
                 for (int i = 1; i < ks.Length; i++)
                     nodeL = nodeL.ChildNodes[ks[i]];
                 if (nodeL.Level != ks.Length - 1) return null;
+                nodeL.Description = description;
+                nodeL.CompleteNodeName = key;
                 return nodeL;
             }
             catch (Exception)
@@ -183,20 +197,21 @@ namespace BkSerConfigUI.SerConfigHelp.Util
     {
         public string Name { get; set; }
 
+        public string CompleteNodeName { get; set; }
+
         public int SpaceNumber { get; set; }
 
         public List<string> Values = new List<string>();
         
         public int Level { get; set; }
 
+        public string Description { get; set; }
+
         public Dictionary<string,Node> ChildNodes = new Dictionary<string, Node>();
 
         public NodeTypes NodeType = NodeTypes.ATTRIBUTE;
 
-        public enum NodeTypes
-        {
-            ATTRIBUTE,OBJECT
-        }
+        public enum NodeTypes{ ATTRIBUTE,OBJECT }
     }
 
 }

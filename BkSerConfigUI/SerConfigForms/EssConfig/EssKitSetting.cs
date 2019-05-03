@@ -16,7 +16,7 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
 
         private void LodaKits(object sender, EventArgs e)
         {
-            Dictionary<string, Node> allKits = EssConst.yaml.FindNodeByKey("kits").ChildNodes;
+            Dictionary<string, Node> allKits = CurrencyConst.yaml.FindNodeByKey("kits").ChildNodes;
             tvKits.Nodes.Clear();
             List<Kit> kits = new List<Kit>();
             foreach (Node node in allKits.Values)
@@ -160,11 +160,11 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
             {
                 if (tvKits.SelectedNode.Level == 1)
                 {
-                    EssConst.yaml.FindNodeByKey("kits").ChildNodes.Remove(tvKits.SelectedNode.Text);
+                    CurrencyConst.yaml.FindNodeByKey("kits").ChildNodes.Remove(tvKits.SelectedNode.Text);
                 }
                 else
                 {
-                    Node node = EssConst.yaml.FindNodeByKey("kits." + tvKits.SelectedNode.Parent.Text + ".items");
+                    Node node = CurrencyConst.yaml.FindNodeByKey("kits." + tvKits.SelectedNode.Parent.Text + ".items");
                     for (int i = 0; i < node.Values.Count; i++)
                         if (node.Values[i].Split(' ')[0].IndexOf(tvKits.SelectedNode.Text) > -1)
                         {

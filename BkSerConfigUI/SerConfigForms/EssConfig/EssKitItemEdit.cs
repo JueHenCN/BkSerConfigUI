@@ -8,7 +8,7 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
     public partial class EssKitItemEdit : Form
     {
         public CustomizeItem Item { get; set; }
-        List<Enchanting> enchantings = SerConfigHelp.Constant.EssConst.ENCHANTINGS;
+        List<Enchanting> enchantings = SerConfigHelp.Constant.CurrencyConst.ENCHANTINGS;
 
         public EssKitItemEdit(CustomizeItem kitItem = null)
         {
@@ -139,7 +139,7 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
 
         private void btnAdd_MouseEnter(object sender, EventArgs e)
         {
-            SerConfigHelp.Constant.EssConst.ttpSettings.SetToolTip(this, "添加附魔属性时注意,并不是所有物品都可以附魔,在附魔前请查询该物品是否允许附魔需要附魔的属性");
+            SerConfigHelp.Constant.CurrencyConst.ttpSettings.SetToolTip(this, "添加附魔属性时注意,并不是所有物品都可以附魔,在附魔前请查询该物品是否允许附魔需要附魔的属性");
         }
     }
 }

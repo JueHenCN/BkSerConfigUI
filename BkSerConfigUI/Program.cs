@@ -13,7 +13,7 @@ namespace BkSerConfigUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SerConfigForms.EssConfig.EssConfig());
+            Application.Run(new SerConfigForms.EssConfig.EssConfigUI());
         }
     }
 }

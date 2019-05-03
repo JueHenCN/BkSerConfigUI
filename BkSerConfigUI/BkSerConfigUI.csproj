@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>0.0.3.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -61,6 +76,12 @@
     <Compile Include="SerConfigForms\EssConfig\EssBuildSettingEdit.Designer.cs">
       <DependentUpon>EssBuildSettingEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="SerConfigForms\EssConfig\EssConfigUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerConfigForms\EssConfig\EssConfigUI.Designer.cs">
+      <DependentUpon>EssConfigUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="SerConfigForms\EssConfig\EssDateSetting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,23 +106,17 @@
     <Compile Include="SerConfigForms\EssConfig\EssKitSetting.Designer.cs">
       <DependentUpon>EssKitSetting.cs</DependentUpon>
     </Compile>
-    <Compile Include="SerConfigForms\EssConfig\EssPhysicalSetting.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SerConfigForms\EssConfig\EssPhysicalSetting.Designer.cs">
-      <DependentUpon>EssPhysicalSetting.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SerConfigForms\EssConfig\EssSignsSetting.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SerConfigForms\EssConfig\EssSignsSetting.Designer.cs">
-      <DependentUpon>EssSignsSetting.cs</DependentUpon>
-    </Compile>
     <Compile Include="SerConfigForms\InputBox.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SerConfigForms\InputBox.Designer.cs">
       <DependentUpon>InputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerConfigForms\ResidenceConfig\ResidenceConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerConfigForms\ResidenceConfig\ResidenceConfig.Designer.cs">
+      <DependentUpon>ResidenceConfig.cs</DependentUpon>
     </Compile>
     <Compile Include="SerConfigForms\SerConfig.cs">
       <SubType>Form</SubType>
@@ -115,7 +130,7 @@
     <Compile Include="SerConfigForms\Start.Designer.cs">
       <DependentUpon>Start.cs</DependentUpon>
     </Compile>
-    <Compile Include="SerConfigHelp\Constant\EssConst.cs" />
+    <Compile Include="SerConfigHelp\Constant\CurrencyConst.cs" />
     <Compile Include="SerConfigHelp\Model\Enchanting.cs" />
     <Compile Include="SerConfigHelp\Model\Item.cs" />
     <Compile Include="SerConfigHelp\Model\Kit.cs" />
@@ -124,6 +139,12 @@
     </Compile>
     <Compile Include="SerConfigTool\SerConfigAlertButton.Designer.cs">
       <DependentUpon>SerConfigAlertButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerConfigTool\SerConfigCheckedListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerConfigTool\SerConfigCheckedListBox.Designer.cs">
+      <DependentUpon>SerConfigCheckedListBox.cs</DependentUpon>
     </Compile>
     <Compile Include="SerConfigTool\SerConfigEditButton.cs">
       <SubType>Component</SubType>
@@ -157,18 +178,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SerConfigForms\EssConfig\EssConfig.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SerConfigForms\EssConfig\EssConfig.Designer.cs">
-      <DependentUpon>EssConfig.cs</DependentUpon>
-    </Compile>
     <Compile Include="SerConfigHelp\Util\CsvUtil.cs" />
     <Compile Include="SerConfigHelp\Util\JarUtil.cs" />
     <Compile Include="SerConfigHelp\Util\CurrencyUtil.cs" />
     <Compile Include="SerConfigHelp\Util\YamlUtil.cs" />
     <EmbeddedResource Include="SerConfigForms\EssConfig\EssBuildSettingEdit.resx">
       <DependentUpon>EssBuildSettingEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SerConfigForms\EssConfig\EssConfigUI.resx">
+      <DependentUpon>EssConfigUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SerConfigForms\EssConfig\EssDateSetting.resx">
       <DependentUpon>EssDateSetting.cs</DependentUpon>
@@ -182,14 +200,11 @@
     <EmbeddedResource Include="SerConfigForms\EssConfig\EssKitSetting.resx">
       <DependentUpon>EssKitSetting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SerConfigForms\EssConfig\EssPhysicalSetting.resx">
-      <DependentUpon>EssPhysicalSetting.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SerConfigForms\EssConfig\EssSignsSetting.resx">
-      <DependentUpon>EssSignsSetting.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SerConfigForms\InputBox.resx">
       <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SerConfigForms\ResidenceConfig\ResidenceConfig.resx">
+      <DependentUpon>ResidenceConfig.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SerConfigForms\SerConfig.resx">
       <DependentUpon>SerConfig.cs</DependentUpon>
@@ -204,9 +219,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SerConfigForms\EssConfig\EssConfig.resx">
-      <DependentUpon>EssConfig.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -226,5 +238,18 @@
     <Content Include="SerConfigHelp\Image\off.png" />
     <Content Include="SerConfigHelp\Image\on.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

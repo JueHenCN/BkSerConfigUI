@@ -15,7 +15,7 @@ namespace BkSerConfigUI.SerConfigForms
         {
             InitializeComponent();
             ConfigName = configName;
-            tbInputBox.Text = EssConst.yaml.GetValue(configName);
+            tbInputBox.Text = CurrencyConst.yaml.GetValue(configName);
             lbInputBox.Text = prompt;
             if(lbInputBox.Size.Width > tbInputBox.Size.Width)
                 tbInputBox.Size = new System.Drawing.Size(lbInputBox.Size.Width,tbInputBox.Size.Height);
@@ -30,7 +30,7 @@ namespace BkSerConfigUI.SerConfigForms
         {
             if (string.IsNullOrEmpty(tbInputBox.Text))
                 tbInputBox.Text = DefaultValue;
-            EssConst.yaml.Edit(ConfigName, tbInputBox.Text);
+            CurrencyConst.yaml.Edit(ConfigName, tbInputBox.Text);
             Close();
         }
     }

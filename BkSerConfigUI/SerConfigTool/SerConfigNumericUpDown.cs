@@ -19,8 +19,8 @@ namespace BkSerConfigUI.SerConfigTool
         protected override void OnValueChanged(EventArgs e)
         {
             base.OnValueChanged(e);
-            if (EssConst.yaml == null) return;
-            EssConst.yaml.Edit(ConfigName, Value.ToString());
+            if (CurrencyConst.yaml == null) return;
+            CurrencyConst.yaml.Edit(ConfigName, Value.ToString());
         }
 
         protected override void OnEnabledChanged(EventArgs e)
@@ -28,14 +28,14 @@ namespace BkSerConfigUI.SerConfigTool
             base.OnEnabledChanged(e);
             if (!string.IsNullOrEmpty(ConfigName) && Enabled)
             {
-                if (CurrencyUtil.ChangeDecimalNumber(EssConst.yaml.GetValue(ConfigName)) > Maximum)
+                if (CurrencyUtil.ChangeDecimalNumber(CurrencyConst.yaml.GetValue(ConfigName)) > Maximum)
                     Value = Maximum;
-                else if (CurrencyUtil.ChangeDecimalNumber(EssConst.yaml.GetValue(ConfigName)) < Minimum)
+                else if (CurrencyUtil.ChangeDecimalNumber(CurrencyConst.yaml.GetValue(ConfigName)) < Minimum)
                     Value = Minimum;
                 if (DecimalPlaces == 0)
-                    Value = CurrencyUtil.ChangeLongNumber(EssConst.yaml.GetValue(ConfigName));
+                    Value = CurrencyUtil.ChangeLongNumber(CurrencyConst.yaml.GetValue(ConfigName));
                 else
-                    Value = CurrencyUtil.ChangeDecimalNumber(EssConst.yaml.GetValue(ConfigName));
+                    Value = CurrencyUtil.ChangeDecimalNumber(CurrencyConst.yaml.GetValue(ConfigName));
             }
         }
     }

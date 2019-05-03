@@ -18,15 +18,15 @@ namespace BkSerConfigUI.SerConfigTool
         protected override void OnSelectedValueChanged(EventArgs e)
         {
             base.OnSelectedValueChanged(e);
-            if (EssConst.yaml == null) return;
-            EssConst.yaml.Edit(ConfigName, Text);
+            if (CurrencyConst.yaml == null) return;
+            CurrencyConst.yaml.Edit(ConfigName, Text);
         }
 
         protected override void OnEnabledChanged(EventArgs e)
         {
             base.OnEnabledChanged(e);
             if (!string.IsNullOrEmpty(ConfigName) && Enabled)
-                Text = EssConst.yaml.GetValue(ConfigName);
+                Text = CurrencyConst.yaml.GetValue(ConfigName);
         }
     }
 }

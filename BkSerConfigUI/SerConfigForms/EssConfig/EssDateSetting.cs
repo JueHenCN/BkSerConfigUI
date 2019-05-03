@@ -15,7 +15,7 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
             this.configName = configName;
             Text = formText;
             dgvDateSource.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            string value = EssConst.yaml.GetValue(configName);
+            string value = CurrencyConst.yaml.GetValue(configName);
             if(!string.IsNullOrEmpty(value))
                 dataSource = new List<string>(value.Split(','));
             ReloadData();
@@ -80,7 +80,7 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
                 value += dataSource[i] + ",";
             if(dataSource.Count > 0)
                 value += dataSource[dataSource.Count - 1];
-            return EssConst.yaml.Edit(configName, value);
+            return CurrencyConst.yaml.Edit(configName, value);
         }
         
         private void dgvDateSource_ButtonEnabled(object sender, System.EventArgs e)
