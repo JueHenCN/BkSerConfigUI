@@ -65,6 +65,10 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
                     Text = enchanting.CustomizeName,
                     Tag = enchanting
                 });
+            if (btnAdd.Enabled)
+                tvEnchantings.Focus();
+            else
+                tvNowEnchanting.Focus();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -111,7 +115,7 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
             nudEnchantingLevel.Value = ((Enchanting)tvEnchantings.SelectedNode.Tag).Level;
         }
         
-        private void btnSave_Click_1(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(tbId.Text))
             {
@@ -131,7 +135,7 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
             Close();
         }
 
-        private void btnCancel_Click_1(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
             Close();
@@ -139,7 +143,8 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
 
         private void btnAdd_MouseEnter(object sender, EventArgs e)
         {
-            SerConfigHelp.Constant.CurrencyConst.ttpSettings.SetToolTip(this, "添加附魔属性时注意,并不是所有物品都可以附魔,在附魔前请查询该物品是否允许附魔需要附魔的属性");
+            SerConfigHelp.Constant.CurrencyConst.ttpSettings.SetToolTip(btnAdd, "添加附魔属性时注意,并不是所有物品都可以附魔,在附魔前请查询该物品是否允许附魔需要附魔的属性");
         }
+        
     }
 }

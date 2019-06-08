@@ -70,8 +70,11 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
                 }
                 else
                     new EssKitEdit().ShowDialog();
-
                 LodaKits(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("请选择礼包进行操作", "操作提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -152,6 +155,10 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
                     new EssKitEdit((Kit)tvKits.SelectedNode.Tag).ShowDialog();
                 LodaKits(sender, e);
             }
+            else
+            {
+                MessageBox.Show("请选择礼包进行操作", "操作提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -173,6 +180,10 @@ namespace BkSerConfigUI.SerConfigForms.EssConfig
                         }
                 }
                 LodaKits(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("请选择礼包进行操作", "操作提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
